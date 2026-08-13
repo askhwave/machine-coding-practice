@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Streamer</title>
+
+</head>
+<script>
+    const stompClient = new StompJs.Client({
+        webSocketFactory: () => new SockJS("/liveLogs")
+    });
+
+    stompClient.onConnect = () => {
+        console.log("connected");
+
+        stompClient.subscribe('/topic/logs', (message) => {
+            const logsDiv = document.getElementById('logs');
+            const line = document.createElement('div');
+            line.textContent = message.body;
+            logsDiv.appendChild(line);
+        });
+    };
+
+    stompClient.activate();
+
+    // Trigger the demo log writer + file watcher so there's actually something to see.
+    fetch('/logs/start', { method: 'POST' });
+</script>
+<body>
+
+<h1>Live Logs</h1>
+
+<p>WebSocket Testing Page</p>
+
+<div id="logs"></div>
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7/bundles/stomp.umd.min.js"></script>
+</body>
+</html>
