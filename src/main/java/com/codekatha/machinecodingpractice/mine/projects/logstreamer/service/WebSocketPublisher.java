@@ -1,4 +1,4 @@
-package com.codekatha.machinecodingpractice.logstreamer.service;
+package com.codekatha.machinecodingpractice.mine.projects.logstreamer.service;
 
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;

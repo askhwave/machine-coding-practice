@@ -1,4 +1,4 @@
-package com.codekatha.machinecodingpractice.logstreamer.config;
+package com.codekatha.machinecodingpractice.mine.projects.logstreamer.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

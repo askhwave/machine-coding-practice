@@ -1,6 +1,6 @@
-package com.codekatha.machinecodingpractice.logstreamer.service;
+package com.codekatha.machinecodingpractice.mine.projects.logstreamer.service;
 
-import com.codekatha.machinecodingpractice.logstreamer.model.LogChunk;
+import com.codekatha.machinecodingpractice.mine.projects.logstreamer.model.LogChunk;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.Executors;

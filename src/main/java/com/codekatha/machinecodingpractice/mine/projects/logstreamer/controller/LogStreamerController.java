@@ -1,7 +1,7 @@
-package com.codekatha.machinecodingpractice.logstreamer.controller;
+package com.codekatha.machinecodingpractice.mine.projects.logstreamer.controller;
 
-import com.codekatha.machinecodingpractice.logstreamer.service.FileWatcherService;
-import com.codekatha.machinecodingpractice.logstreamer.service.LogWriterService;
+import com.codekatha.machinecodingpractice.mine.projects.logstreamer.service.FileWatcherService;
+import com.codekatha.machinecodingpractice.mine.projects.logstreamer.service.LogWriterService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
