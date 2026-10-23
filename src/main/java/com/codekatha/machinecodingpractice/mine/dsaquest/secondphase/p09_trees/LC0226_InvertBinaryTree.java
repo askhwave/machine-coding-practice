@@ -43,7 +43,9 @@ public class LC0226_InvertBinaryTree {
 
     public static void main(String[] args) {
         LC0226_InvertBinaryTree sol = new LC0226_InvertBinaryTree();
-        System.out.println(sol.invertTree(TreeNode.of(4,2,7,1,3,6,9))); // [4, 7, 2, 9, 6, 3, 1]
-        System.out.println(sol.invertTree(TreeNode.of(2,1,3)));         // [2, 3, 1]
+        Check.start("LC0226_InvertBinaryTree");
+        Check.eq("[4, 7, 2, 9, 6, 3, 1]", () -> sol.invertTree(TreeNode.of(4,2,7,1,3,6,9)));
+        Check.eq("[2, 3, 1]", () -> sol.invertTree(TreeNode.of(2,1,3)));
+        Check.summary();
     }
 }

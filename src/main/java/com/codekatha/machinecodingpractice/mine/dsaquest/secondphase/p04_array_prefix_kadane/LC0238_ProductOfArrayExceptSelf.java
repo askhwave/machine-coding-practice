@@ -41,7 +41,9 @@ public class LC0238_ProductOfArrayExceptSelf {
 
     public static void main(String[] args) {
         LC0238_ProductOfArrayExceptSelf sol = new LC0238_ProductOfArrayExceptSelf();
-        System.out.println(Arrays.toString(sol.productExceptSelf(new int[]{1,2,3,4})));     // [24, 12, 8, 6]
-        System.out.println(Arrays.toString(sol.productExceptSelf(new int[]{-1,1,0,-3,3}))); // [0, 0, 9, 0, 0]
+        Check.start("LC0238_ProductOfArrayExceptSelf");
+        Check.eq("[24, 12, 8, 6]", () -> Arrays.toString(sol.productExceptSelf(new int[]{1,2,3,4})));
+        Check.eq("[0, 0, 9, 0, 0]", () -> Arrays.toString(sol.productExceptSelf(new int[]{-1,1,0,-3,3})));
+        Check.summary();
     }
 }

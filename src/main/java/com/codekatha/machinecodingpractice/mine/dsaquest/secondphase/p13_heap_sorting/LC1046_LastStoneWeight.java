@@ -42,8 +42,10 @@ public class LC1046_LastStoneWeight {
 
     public static void main(String[] args) {
         LC1046_LastStoneWeight sol = new LC1046_LastStoneWeight();
-        System.out.println(sol.lastStoneWeight(new int[]{2,7,4,1,8,1})); // 1
-        System.out.println(sol.lastStoneWeight(new int[]{1}));             // 1
-        System.out.println(sol.lastStoneWeight(new int[]{2,2}));           // 0
+        Check.start("LC1046_LastStoneWeight");
+        Check.eq("1", () -> sol.lastStoneWeight(new int[]{2,7,4,1,8,1}));
+        Check.eq("1", () -> sol.lastStoneWeight(new int[]{1}));
+        Check.eq("0", () -> sol.lastStoneWeight(new int[]{2,2}));
+        Check.summary();
     }
 }

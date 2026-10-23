@@ -36,7 +36,9 @@ public class LC0242_ValidAnagram {
 
     public static void main(String[] args) {
         LC0242_ValidAnagram sol = new LC0242_ValidAnagram();
-        System.out.println(sol.isAnagram("anagram", "nagaram")); // true
-        System.out.println(sol.isAnagram("rat", "car"));         // false
+        Check.start("LC0242_ValidAnagram");
+        Check.eq("true", () -> sol.isAnagram("anagram", "nagaram"));
+        Check.eq("false", () -> sol.isAnagram("rat", "car"));
+        Check.summary();
     }
 }

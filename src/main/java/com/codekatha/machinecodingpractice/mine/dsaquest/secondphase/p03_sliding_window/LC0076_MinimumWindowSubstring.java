@@ -47,8 +47,10 @@ public class LC0076_MinimumWindowSubstring {
 
     public static void main(String[] args) {
         LC0076_MinimumWindowSubstring sol = new LC0076_MinimumWindowSubstring();
-        System.out.println(sol.minWindow("ADOBECODEBANC", "ABC")); // BANC
-        System.out.println(sol.minWindow("a", "a"));              // a
-        System.out.println(sol.minWindow("a", "aa"));             // (empty)
+        Check.start("LC0076_MinimumWindowSubstring");
+        Check.eq("BANC", () -> sol.minWindow("ADOBECODEBANC", "ABC"));
+        Check.eq("a", () -> sol.minWindow("a", "a"));
+        Check.eq("", () -> sol.minWindow("a", "aa"));
+        Check.summary();
     }
 }

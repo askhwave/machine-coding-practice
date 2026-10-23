@@ -44,8 +44,10 @@ public class LC0041_FirstMissingPositive {
 
     public static void main(String[] args) {
         LC0041_FirstMissingPositive sol = new LC0041_FirstMissingPositive();
-        System.out.println(sol.firstMissingPositive(new int[]{1,2,0}));        // 3
-        System.out.println(sol.firstMissingPositive(new int[]{3,4,-1,1}));     // 2
-        System.out.println(sol.firstMissingPositive(new int[]{7,8,9,11,12})); // 1
+        Check.start("LC0041_FirstMissingPositive");
+        Check.eq("3", () -> sol.firstMissingPositive(new int[]{1,2,0}));
+        Check.eq("2", () -> sol.firstMissingPositive(new int[]{3,4,-1,1}));
+        Check.eq("1", () -> sol.firstMissingPositive(new int[]{7,8,9,11,12}));
+        Check.summary();
     }
 }

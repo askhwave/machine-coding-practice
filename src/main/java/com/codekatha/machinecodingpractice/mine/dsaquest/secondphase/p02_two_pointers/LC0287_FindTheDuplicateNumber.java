@@ -47,8 +47,10 @@ public class LC0287_FindTheDuplicateNumber {
 
     public static void main(String[] args) {
         LC0287_FindTheDuplicateNumber sol = new LC0287_FindTheDuplicateNumber();
-        System.out.println(sol.findDuplicate(new int[]{1,3,4,2,2})); // 2
-        System.out.println(sol.findDuplicate(new int[]{3,1,3,4,2})); // 3
-        System.out.println(sol.findDuplicate(new int[]{3,3,3,3,3})); // 3
+        Check.start("LC0287_FindTheDuplicateNumber");
+        Check.eq("2", () -> sol.findDuplicate(new int[]{1,3,4,2,2}));
+        Check.eq("3", () -> sol.findDuplicate(new int[]{3,1,3,4,2}));
+        Check.eq("3", () -> sol.findDuplicate(new int[]{3,3,3,3,3}));
+        Check.summary();
     }
 }

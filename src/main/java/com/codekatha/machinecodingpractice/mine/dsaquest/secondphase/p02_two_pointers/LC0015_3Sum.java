@@ -45,8 +45,10 @@ public class LC0015_3Sum {
 
     public static void main(String[] args) {
         LC0015_3Sum sol = new LC0015_3Sum();
-        System.out.println(sol.threeSum(new int[]{-1,0,1,2,-1,-4})); // [[-1, -1, 2], [-1, 0, 1]]
-        System.out.println(sol.threeSum(new int[]{0,1,1}));           // []
-        System.out.println(sol.threeSum(new int[]{0,0,0}));           // [[0, 0, 0]]
+        Check.start("LC0015_3Sum");
+        Check.sameElements("[[-1, -1, 2], [-1, 0, 1]]", () -> sol.threeSum(new int[]{-1,0,1,2,-1,-4}));
+        Check.sameElements("[]", () -> sol.threeSum(new int[]{0,1,1}));
+        Check.sameElements("[[0, 0, 0]]", () -> sol.threeSum(new int[]{0,0,0}));
+        Check.summary();
     }
 }

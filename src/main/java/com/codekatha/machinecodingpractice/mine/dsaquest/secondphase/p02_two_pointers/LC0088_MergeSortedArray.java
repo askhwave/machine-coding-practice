@@ -51,8 +51,10 @@ public class LC0088_MergeSortedArray {
 
     public static void main(String[] args) {
         LC0088_MergeSortedArray sol = new LC0088_MergeSortedArray();
+        Check.start("LC0088_MergeSortedArray");
         int[] a = {1,2,3,0,0,0};
         sol.merge(a, 3, new int[]{2,5,6}, 3);
-        System.out.println(Arrays.toString(a)); // [1, 2, 2, 3, 5, 6]
+        Check.eq("[1, 2, 2, 3, 5, 6]", () -> Arrays.toString(a));
+        Check.summary();
     }
 }

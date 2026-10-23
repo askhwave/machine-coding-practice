@@ -49,7 +49,9 @@ public class LC0733_FloodFill {
 
     public static void main(String[] args) {
         LC0733_FloodFill sol = new LC0733_FloodFill();
-        System.out.println(Arrays.deepToString(sol.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1, 1, 2))); // [[2, 2, 2], [2, 2, 0], [2, 0, 1]]
-        System.out.println(Arrays.deepToString(sol.floodFill(new int[][]{{0,0,0},{0,0,0}}, 0, 0, 0)));         // [[0, 0, 0], [0, 0, 0]]
+        Check.start("LC0733_FloodFill");
+        Check.eq("[[2, 2, 2], [2, 2, 0], [2, 0, 1]]", () -> Arrays.deepToString(sol.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1, 1, 2)));
+        Check.eq("[[0, 0, 0], [0, 0, 0]]", () -> Arrays.deepToString(sol.floodFill(new int[][]{{0,0,0},{0,0,0}}, 0, 0, 0)));
+        Check.summary();
     }
 }

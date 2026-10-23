@@ -47,8 +47,10 @@ public class LC0153_FindMinimumInRotatedSortedArray {
 
     public static void main(String[] args) {
         LC0153_FindMinimumInRotatedSortedArray sol = new LC0153_FindMinimumInRotatedSortedArray();
-        System.out.println(sol.findMin(new int[]{3,4,5,1,2}));       // 1
-        System.out.println(sol.findMin(new int[]{4,5,6,7,0,1,2}));   // 0
-        System.out.println(sol.findMin(new int[]{11,13,15,17}));     // 11
+        Check.start("LC0153_FindMinimumInRotatedSortedArray");
+        Check.eq("1", () -> sol.findMin(new int[]{3,4,5,1,2}));
+        Check.eq("0", () -> sol.findMin(new int[]{4,5,6,7,0,1,2}));
+        Check.eq("11", () -> sol.findMin(new int[]{11,13,15,17}));
+        Check.summary();
     }
 }

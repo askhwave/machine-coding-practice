@@ -41,8 +41,10 @@ public class LC0098_ValidateBinarySearchTree {
 
     public static void main(String[] args) {
         LC0098_ValidateBinarySearchTree sol = new LC0098_ValidateBinarySearchTree();
-        System.out.println(sol.isValidBST(TreeNode.of(2,1,3)));                 // true
-        System.out.println(sol.isValidBST(TreeNode.of(5,1,4,null,null,3,6)));     // false
-        System.out.println(sol.isValidBST(TreeNode.of(5,4,6,null,null,3,7)));     // false
+        Check.start("LC0098_ValidateBinarySearchTree");
+        Check.eq("true", () -> sol.isValidBST(TreeNode.of(2,1,3)));
+        Check.eq("false", () -> sol.isValidBST(TreeNode.of(5,1,4,null,null,3,6)));
+        Check.eq("false", () -> sol.isValidBST(TreeNode.of(5,4,6,null,null,3,7)));
+        Check.summary();
     }
 }

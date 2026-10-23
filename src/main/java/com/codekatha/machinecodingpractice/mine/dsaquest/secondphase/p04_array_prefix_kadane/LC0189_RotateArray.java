@@ -39,11 +39,13 @@ public class LC0189_RotateArray {
 
     public static void main(String[] args) {
         LC0189_RotateArray sol = new LC0189_RotateArray();
+        Check.start("LC0189_RotateArray");
         int[] a = {1,2,3,4,5,6,7};
         sol.rotate(a, 3);
-        System.out.println(Arrays.toString(a)); // [5, 6, 7, 1, 2, 3, 4]
+        Check.eq("[5, 6, 7, 1, 2, 3, 4]", () -> Arrays.toString(a));
         int[] b = {-1,-100,3,99};
         sol.rotate(b, 2);
-        System.out.println(Arrays.toString(b)); // [3, 99, -1, -100]
+        Check.eq("[3, 99, -1, -100]", () -> Arrays.toString(b));
+        Check.summary();
     }
 }

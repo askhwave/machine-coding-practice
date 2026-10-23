@@ -46,8 +46,10 @@ public class LC2264_Largest3SameDigitNumberInString {
 
     public static void main(String[] args) {
         LC2264_Largest3SameDigitNumberInString sol = new LC2264_Largest3SameDigitNumberInString();
-        System.out.println(sol.largestGoodInteger("6777133339")); // 777
-        System.out.println(sol.largestGoodInteger("2300019"));    // 000
-        System.out.println(sol.largestGoodInteger("42352338"));   // (empty)
+        Check.start("LC2264_Largest3SameDigitNumberInString");
+        Check.eq("777", () -> sol.largestGoodInteger("6777133339"));
+        Check.eq("000", () -> sol.largestGoodInteger("2300019"));
+        Check.eq("", () -> sol.largestGoodInteger("42352338"));
+        Check.summary();
     }
 }

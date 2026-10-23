@@ -42,11 +42,13 @@ public class LC0160_IntersectionOfTwoLinkedLists {
 
     public static void main(String[] args) {
         LC0160_IntersectionOfTwoLinkedLists sol = new LC0160_IntersectionOfTwoLinkedLists();
+        Check.start("LC0160_IntersectionOfTwoLinkedLists");
         ListNode common = ListNode.of(8,4,5);
         ListNode a = new ListNode(4, new ListNode(1, common));
         ListNode b = new ListNode(5, new ListNode(6, new ListNode(1, common)));
         ListNode r = sol.getIntersectionNode(a, b);
-        System.out.println(r == null ? "null" : "Intersected at " + r.val); // 8
-        System.out.println(sol.getIntersectionNode(ListNode.of(2,6,4), ListNode.of(1,5))); // null
+        Check.eq("8", () -> r == null ? "null" : "Intersected at " + r.val);
+        Check.eq("null", () -> sol.getIntersectionNode(ListNode.of(2,6,4), ListNode.of(1,5)));
+        Check.summary();
     }
 }

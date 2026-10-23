@@ -41,8 +41,10 @@ public class LC0045_JumpGameII {
 
     public static void main(String[] args) {
         LC0045_JumpGameII sol = new LC0045_JumpGameII();
-        System.out.println(sol.jump(new int[]{2,3,1,1,4})); // 2
-        System.out.println(sol.jump(new int[]{2,3,0,1,4})); // 2
-        System.out.println(sol.jump(new int[]{0}));         // 0
+        Check.start("LC0045_JumpGameII");
+        Check.eq("2", () -> sol.jump(new int[]{2,3,1,1,4}));
+        Check.eq("2", () -> sol.jump(new int[]{2,3,0,1,4}));
+        Check.eq("0", () -> sol.jump(new int[]{0}));
+        Check.summary();
     }
 }

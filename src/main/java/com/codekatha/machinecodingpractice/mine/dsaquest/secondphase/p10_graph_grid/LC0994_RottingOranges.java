@@ -49,8 +49,10 @@ public class LC0994_RottingOranges {
 
     public static void main(String[] args) {
         LC0994_RottingOranges sol = new LC0994_RottingOranges();
-        System.out.println(sol.orangesRotting(new int[][]{{2,1,1},{1,1,0},{0,1,1}})); // 4
-        System.out.println(sol.orangesRotting(new int[][]{{2,1,1},{0,1,1},{1,0,1}})); // -1
-        System.out.println(sol.orangesRotting(new int[][]{{0,2}}));                   // 0
+        Check.start("LC0994_RottingOranges");
+        Check.eq("4", () -> sol.orangesRotting(new int[][]{{2,1,1},{1,1,0},{0,1,1}}));
+        Check.eq("-1", () -> sol.orangesRotting(new int[][]{{2,1,1},{0,1,1},{1,0,1}}));
+        Check.eq("0", () -> sol.orangesRotting(new int[][]{{0,2}}));
+        Check.summary();
     }
 }

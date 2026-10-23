@@ -51,10 +51,12 @@ public class LC0020_ValidParentheses {
 
     public static void main(String[] args) {
         LC0020_ValidParentheses sol = new LC0020_ValidParentheses();
-        System.out.println(sol.isValid("()"));      // true
-        System.out.println(sol.isValid("()[]{}"));  // true
-        System.out.println(sol.isValid("(]"));      // false
-        System.out.println(sol.isValid("([])"));    // true
-        System.out.println(sol.isValid("]"));       // false
+        Check.start("LC0020_ValidParentheses");
+        Check.eq("true", () -> sol.isValid("()"));
+        Check.eq("true", () -> sol.isValid("()[]{}"));
+        Check.eq("false", () -> sol.isValid("(]"));
+        Check.eq("true", () -> sol.isValid("([])"));
+        Check.eq("false", () -> sol.isValid("]"));
+        Check.summary();
     }
 }

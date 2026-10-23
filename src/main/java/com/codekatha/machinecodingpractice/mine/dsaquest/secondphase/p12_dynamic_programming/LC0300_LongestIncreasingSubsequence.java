@@ -45,8 +45,10 @@ public class LC0300_LongestIncreasingSubsequence {
 
     public static void main(String[] args) {
         LC0300_LongestIncreasingSubsequence sol = new LC0300_LongestIncreasingSubsequence();
-        System.out.println(sol.lengthOfLIS(new int[]{10,9,2,5,3,7,101,18})); // 4
-        System.out.println(sol.lengthOfLIS(new int[]{0,1,0,3,2,3}));         // 4
-        System.out.println(sol.lengthOfLIS(new int[]{7,7,7,7,7,7,7}));       // 1
+        Check.start("LC0300_LongestIncreasingSubsequence");
+        Check.eq("4", () -> sol.lengthOfLIS(new int[]{10,9,2,5,3,7,101,18}));
+        Check.eq("4", () -> sol.lengthOfLIS(new int[]{0,1,0,3,2,3}));
+        Check.eq("1", () -> sol.lengthOfLIS(new int[]{7,7,7,7,7,7,7}));
+        Check.summary();
     }
 }

@@ -48,8 +48,10 @@ public class LC0744_FindSmallestLetterGreaterThanTarget {
 
     public static void main(String[] args) {
         LC0744_FindSmallestLetterGreaterThanTarget sol = new LC0744_FindSmallestLetterGreaterThanTarget();
-        System.out.println(sol.nextGreatestLetter(new char[]{'c','f','j'}, 'a'));     // c
-        System.out.println(sol.nextGreatestLetter(new char[]{'c','f','j'}, 'c'));     // f
-        System.out.println(sol.nextGreatestLetter(new char[]{'x','x','y','y'}, 'z')); // x
+        Check.start("LC0744_FindSmallestLetterGreaterThanTarget");
+        Check.eq("c", () -> sol.nextGreatestLetter(new char[]{'c','f','j'}, 'a'));
+        Check.eq("f", () -> sol.nextGreatestLetter(new char[]{'c','f','j'}, 'c'));
+        Check.eq("x", () -> sol.nextGreatestLetter(new char[]{'x','x','y','y'}, 'z'));
+        Check.summary();
     }
 }

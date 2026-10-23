@@ -53,13 +53,15 @@ public class LC0380_InsertDeleteGetRandomO1 {
 
     public static void main(String[] args) {
         LC0380_InsertDeleteGetRandomO1 sol = new LC0380_InsertDeleteGetRandomO1();
+        Check.start("LC0380_InsertDeleteGetRandomO1");
         RandomizedSet rs = new RandomizedSet();
-        System.out.println(rs.insert(1));   // true
-        System.out.println(rs.remove(2));   // false
-        System.out.println(rs.insert(2));   // true
-        System.out.println(rs.getRandom()); // 1 or 2
-        System.out.println(rs.remove(1));   // true
-        System.out.println(rs.insert(2));   // false
-        System.out.println(rs.getRandom()); // 2
+        Check.eq("true", () -> rs.insert(1));
+        Check.eq("false", () -> rs.remove(2));
+        Check.eq("true", () -> rs.insert(2));
+        Check.eq(true, () -> { int v = rs.getRandom(); return v == 1 || v == 2; });
+        Check.eq("true", () -> rs.remove(1));
+        Check.eq("false", () -> rs.insert(2));
+        Check.eq("2", () -> rs.getRandom());
+        Check.summary();
     }
 }

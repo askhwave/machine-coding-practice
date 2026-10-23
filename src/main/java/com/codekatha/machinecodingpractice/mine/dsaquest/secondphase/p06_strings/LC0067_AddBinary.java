@@ -37,7 +37,9 @@ public class LC0067_AddBinary {
 
     public static void main(String[] args) {
         LC0067_AddBinary sol = new LC0067_AddBinary();
-        System.out.println(sol.addBinary("11", "1"));        // 100
-        System.out.println(sol.addBinary("1010", "1011"));  // 10101
+        Check.start("LC0067_AddBinary");
+        Check.eq("100", () -> sol.addBinary("11", "1"));
+        Check.eq("10101", () -> sol.addBinary("1010", "1011"));
+        Check.summary();
     }
 }

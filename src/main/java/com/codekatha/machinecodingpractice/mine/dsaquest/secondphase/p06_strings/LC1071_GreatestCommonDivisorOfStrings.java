@@ -44,8 +44,10 @@ public class LC1071_GreatestCommonDivisorOfStrings {
 
     public static void main(String[] args) {
         LC1071_GreatestCommonDivisorOfStrings sol = new LC1071_GreatestCommonDivisorOfStrings();
-        System.out.println(sol.gcdOfStrings("ABCABC", "ABC"));   // ABC
-        System.out.println(sol.gcdOfStrings("ABABAB", "ABAB"));  // AB
-        System.out.println(sol.gcdOfStrings("LEET", "CODE"));    // (empty)
+        Check.start("LC1071_GreatestCommonDivisorOfStrings");
+        Check.eq("ABC", () -> sol.gcdOfStrings("ABCABC", "ABC"));
+        Check.eq("AB", () -> sol.gcdOfStrings("ABABAB", "ABAB"));
+        Check.eq("", () -> sol.gcdOfStrings("LEET", "CODE"));
+        Check.summary();
     }
 }

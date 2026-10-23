@@ -48,7 +48,9 @@ public class LC1436_DestinationCity {
 
     public static void main(String[] args) {
         LC1436_DestinationCity sol = new LC1436_DestinationCity();
-        System.out.println(sol.destCity(List.of(List.of("London","New York"), List.of("New York","Lima"), List.of("Lima","Sao Paulo")))); // Sao Paulo
-        System.out.println(sol.destCity(List.of(List.of("B","C"), List.of("D","B"), List.of("C","A")))); // A
+        Check.start("LC1436_DestinationCity");
+        Check.eq("Sao Paulo", () -> sol.destCity(List.of(List.of("London","New York"), List.of("New York","Lima"), List.of("Lima","Sao Paulo"))));
+        Check.eq("A", () -> sol.destCity(List.of(List.of("B","C"), List.of("D","B"), List.of("C","A"))));
+        Check.summary();
     }
 }

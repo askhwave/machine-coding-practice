@@ -48,8 +48,10 @@ public class LC0013_RomanToInteger {
 
     public static void main(String[] args) {
         LC0013_RomanToInteger sol = new LC0013_RomanToInteger();
-        System.out.println(sol.romanToInt("III"));      // 3
-        System.out.println(sol.romanToInt("LVIII"));    // 58
-        System.out.println(sol.romanToInt("MCMXCIV"));  // 1994
+        Check.start("LC0013_RomanToInteger");
+        Check.eq("3", () -> sol.romanToInt("III"));
+        Check.eq("58", () -> sol.romanToInt("LVIII"));
+        Check.eq("1994", () -> sol.romanToInt("MCMXCIV"));
+        Check.summary();
     }
 }

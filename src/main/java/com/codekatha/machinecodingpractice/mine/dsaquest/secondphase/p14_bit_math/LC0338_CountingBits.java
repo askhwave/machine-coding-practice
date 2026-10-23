@@ -38,7 +38,9 @@ public class LC0338_CountingBits {
 
     public static void main(String[] args) {
         LC0338_CountingBits sol = new LC0338_CountingBits();
-        System.out.println(Arrays.toString(sol.countBits(2))); // [0, 1, 1]
-        System.out.println(Arrays.toString(sol.countBits(5))); // [0, 1, 1, 2, 1, 2]
+        Check.start("LC0338_CountingBits");
+        Check.eq("[0, 1, 1]", () -> Arrays.toString(sol.countBits(2)));
+        Check.eq("[0, 1, 1, 2, 1, 2]", () -> Arrays.toString(sol.countBits(5)));
+        Check.summary();
     }
 }

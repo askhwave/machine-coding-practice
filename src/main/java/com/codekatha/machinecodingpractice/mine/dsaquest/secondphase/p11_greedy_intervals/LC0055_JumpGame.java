@@ -40,8 +40,10 @@ public class LC0055_JumpGame {
 
     public static void main(String[] args) {
         LC0055_JumpGame sol = new LC0055_JumpGame();
-        System.out.println(sol.canJump(new int[]{2,3,1,1,4})); // true
-        System.out.println(sol.canJump(new int[]{3,2,1,0,4})); // false
-        System.out.println(sol.canJump(new int[]{0}));         // true
+        Check.start("LC0055_JumpGame");
+        Check.eq("true", () -> sol.canJump(new int[]{2,3,1,1,4}));
+        Check.eq("false", () -> sol.canJump(new int[]{3,2,1,0,4}));
+        Check.eq("true", () -> sol.canJump(new int[]{0}));
+        Check.summary();
     }
 }

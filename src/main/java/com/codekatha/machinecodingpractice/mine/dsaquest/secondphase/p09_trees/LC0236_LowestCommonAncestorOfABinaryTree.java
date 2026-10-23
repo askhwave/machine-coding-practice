@@ -43,8 +43,10 @@ public class LC0236_LowestCommonAncestorOfABinaryTree {
 
     public static void main(String[] args) {
         LC0236_LowestCommonAncestorOfABinaryTree sol = new LC0236_LowestCommonAncestorOfABinaryTree();
+        Check.start("LC0236_LowestCommonAncestorOfABinaryTree");
         TreeNode root = TreeNode.of(3,5,1,6,2,0,8,null,null,7,4);
-        System.out.println(sol.lowestCommonAncestor(root, root.left, root.right).val);                  // 3
-        System.out.println(sol.lowestCommonAncestor(root, root.left, root.left.right.right).val);       // 5
+        Check.eq("3", () -> sol.lowestCommonAncestor(root, root.left, root.right).val);
+        Check.eq("5", () -> sol.lowestCommonAncestor(root, root.left, root.left.right.right).val);
+        Check.summary();
     }
 }

@@ -45,8 +45,10 @@ public class LC1903_LargestOddNumberInString {
 
     public static void main(String[] args) {
         LC1903_LargestOddNumberInString sol = new LC1903_LargestOddNumberInString();
-        System.out.println(sol.largestOddNumber("52"));    // 5
-        System.out.println(sol.largestOddNumber("4206"));  // (empty)
-        System.out.println(sol.largestOddNumber("35427")); // 35427
+        Check.start("LC1903_LargestOddNumberInString");
+        Check.eq("5", () -> sol.largestOddNumber("52"));
+        Check.eq("", () -> sol.largestOddNumber("4206"));
+        Check.eq("35427", () -> sol.largestOddNumber("35427"));
+        Check.summary();
     }
 }

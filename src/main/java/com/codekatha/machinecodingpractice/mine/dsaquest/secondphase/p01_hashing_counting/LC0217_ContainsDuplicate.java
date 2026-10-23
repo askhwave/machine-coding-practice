@@ -37,7 +37,9 @@ public class LC0217_ContainsDuplicate {
 
     public static void main(String[] args) {
         LC0217_ContainsDuplicate sol = new LC0217_ContainsDuplicate();
-        System.out.println(sol.containsDuplicate(new int[]{1,2,3,1})); // true
-        System.out.println(sol.containsDuplicate(new int[]{1,2,3,4})); // false
+        Check.start("LC0217_ContainsDuplicate");
+        Check.eq("true", () -> sol.containsDuplicate(new int[]{1,2,3,1}));
+        Check.eq("false", () -> sol.containsDuplicate(new int[]{1,2,3,4}));
+        Check.summary();
     }
 }

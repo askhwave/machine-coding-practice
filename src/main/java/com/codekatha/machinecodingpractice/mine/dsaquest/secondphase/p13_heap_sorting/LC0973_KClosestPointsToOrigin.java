@@ -42,7 +42,9 @@ public class LC0973_KClosestPointsToOrigin {
 
     public static void main(String[] args) {
         LC0973_KClosestPointsToOrigin sol = new LC0973_KClosestPointsToOrigin();
-        System.out.println(Arrays.deepToString(sol.kClosest(new int[][]{{1,3},{-2,2}}, 1)));            // [[-2, 2]]
-        System.out.println(Arrays.deepToString(sol.kClosest(new int[][]{{3,3},{5,-1},{-2,4}}, 2)));     // [[3, 3], [-2, 4]] (any order)
+        Check.start("LC0973_KClosestPointsToOrigin");
+        Check.sameElements("[[-2, 2]]", () -> sol.kClosest(new int[][]{{1,3},{-2,2}}, 1));
+        Check.sameElements("[[3, 3], [-2, 4]]", () -> sol.kClosest(new int[][]{{3,3},{5,-1},{-2,4}}, 2));
+        Check.summary();
     }
 }

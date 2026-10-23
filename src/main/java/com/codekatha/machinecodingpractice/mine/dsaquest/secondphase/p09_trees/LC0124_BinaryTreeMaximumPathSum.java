@@ -43,8 +43,10 @@ public class LC0124_BinaryTreeMaximumPathSum {
 
     public static void main(String[] args) {
         LC0124_BinaryTreeMaximumPathSum sol = new LC0124_BinaryTreeMaximumPathSum();
-        System.out.println(sol.maxPathSum(TreeNode.of(1,2,3)));                        // 6
-        System.out.println(sol.maxPathSum(TreeNode.of(-10,9,20,null,null,15,7)));       // 42
-        System.out.println(sol.maxPathSum(TreeNode.of(-3)));                            // -3
+        Check.start("LC0124_BinaryTreeMaximumPathSum");
+        Check.eq("6", () -> sol.maxPathSum(TreeNode.of(1,2,3)));
+        Check.eq("42", () -> sol.maxPathSum(TreeNode.of(-10,9,20,null,null,15,7)));
+        Check.eq("-3", () -> sol.maxPathSum(TreeNode.of(-3)));
+        Check.summary();
     }
 }

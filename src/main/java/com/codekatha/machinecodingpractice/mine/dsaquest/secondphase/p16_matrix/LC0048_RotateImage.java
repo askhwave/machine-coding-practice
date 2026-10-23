@@ -39,8 +39,10 @@ public class LC0048_RotateImage {
 
     public static void main(String[] args) {
         LC0048_RotateImage sol = new LC0048_RotateImage();
+        Check.start("LC0048_RotateImage");
         int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
         sol.rotate(a);
-        System.out.println(Arrays.deepToString(a)); // [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+        Check.eq("[[7, 4, 1], [8, 5, 2], [9, 6, 3]]", () -> Arrays.deepToString(a));
+        Check.summary();
     }
 }

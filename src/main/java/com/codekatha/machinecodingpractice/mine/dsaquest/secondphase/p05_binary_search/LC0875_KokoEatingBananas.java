@@ -48,8 +48,10 @@ public class LC0875_KokoEatingBananas {
 
     public static void main(String[] args) {
         LC0875_KokoEatingBananas sol = new LC0875_KokoEatingBananas();
-        System.out.println(sol.minEatingSpeed(new int[]{3,6,7,11}, 8));          // 4
-        System.out.println(sol.minEatingSpeed(new int[]{30,11,23,4,20}, 5));     // 30
-        System.out.println(sol.minEatingSpeed(new int[]{30,11,23,4,20}, 6));     // 23
+        Check.start("LC0875_KokoEatingBananas");
+        Check.eq("4", () -> sol.minEatingSpeed(new int[]{3,6,7,11}, 8));
+        Check.eq("30", () -> sol.minEatingSpeed(new int[]{30,11,23,4,20}, 5));
+        Check.eq("23", () -> sol.minEatingSpeed(new int[]{30,11,23,4,20}, 6));
+        Check.summary();
     }
 }

@@ -40,8 +40,10 @@ public class LC0073_SetMatrixZeroes {
 
     public static void main(String[] args) {
         LC0073_SetMatrixZeroes sol = new LC0073_SetMatrixZeroes();
+        Check.start("LC0073_SetMatrixZeroes");
         int[][] a = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
         sol.setZeroes(a);
-        System.out.println(Arrays.deepToString(a)); // [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
+        Check.eq("[[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]", () -> Arrays.deepToString(a));
+        Check.summary();
     }
 }

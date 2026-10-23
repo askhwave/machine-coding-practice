@@ -39,8 +39,10 @@ public class LC0234_PalindromeLinkedList {
 
     public static void main(String[] args) {
         LC0234_PalindromeLinkedList sol = new LC0234_PalindromeLinkedList();
-        System.out.println(sol.isPalindrome(ListNode.of(1,2,2,1))); // true
-        System.out.println(sol.isPalindrome(ListNode.of(1,2)));     // false
-        System.out.println(sol.isPalindrome(ListNode.of(1,2,3,2,1))); // true
+        Check.start("LC0234_PalindromeLinkedList");
+        Check.eq("true", () -> sol.isPalindrome(ListNode.of(1,2,2,1)));
+        Check.eq("false", () -> sol.isPalindrome(ListNode.of(1,2)));
+        Check.eq("true", () -> sol.isPalindrome(ListNode.of(1,2,3,2,1)));
+        Check.summary();
     }
 }

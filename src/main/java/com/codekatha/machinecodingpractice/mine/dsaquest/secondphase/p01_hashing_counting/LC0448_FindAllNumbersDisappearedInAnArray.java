@@ -40,7 +40,9 @@ public class LC0448_FindAllNumbersDisappearedInAnArray {
 
     public static void main(String[] args) {
         LC0448_FindAllNumbersDisappearedInAnArray sol = new LC0448_FindAllNumbersDisappearedInAnArray();
-        System.out.println(sol.findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1})); // [5, 6]
-        System.out.println(sol.findDisappearedNumbers(new int[]{1,1}));             // [2]
+        Check.start("LC0448_FindAllNumbersDisappearedInAnArray");
+        Check.sameElements("[5, 6]", () -> sol.findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1}));
+        Check.sameElements("[2]", () -> sol.findDisappearedNumbers(new int[]{1,1}));
+        Check.summary();
     }
 }

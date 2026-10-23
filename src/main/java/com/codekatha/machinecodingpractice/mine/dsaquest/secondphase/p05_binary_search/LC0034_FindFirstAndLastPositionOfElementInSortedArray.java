@@ -47,8 +47,10 @@ public class LC0034_FindFirstAndLastPositionOfElementInSortedArray {
 
     public static void main(String[] args) {
         LC0034_FindFirstAndLastPositionOfElementInSortedArray sol = new LC0034_FindFirstAndLastPositionOfElementInSortedArray();
-        System.out.println(Arrays.toString(sol.searchRange(new int[]{5,7,7,8,8,10}, 8))); // [3, 4]
-        System.out.println(Arrays.toString(sol.searchRange(new int[]{5,7,7,8,8,10}, 6))); // [-1, -1]
-        System.out.println(Arrays.toString(sol.searchRange(new int[]{}, 0)));            // [-1, -1]
+        Check.start("LC0034_FindFirstAndLastPositionOfElementInSortedArray");
+        Check.eq("[3, 4]", () -> Arrays.toString(sol.searchRange(new int[]{5,7,7,8,8,10}, 8)));
+        Check.eq("[-1, -1]", () -> Arrays.toString(sol.searchRange(new int[]{5,7,7,8,8,10}, 6)));
+        Check.eq("[-1, -1]", () -> Arrays.toString(sol.searchRange(new int[]{}, 0)));
+        Check.summary();
     }
 }

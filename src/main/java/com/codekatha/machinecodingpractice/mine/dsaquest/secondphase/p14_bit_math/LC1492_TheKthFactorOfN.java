@@ -45,8 +45,10 @@ public class LC1492_TheKthFactorOfN {
 
     public static void main(String[] args) {
         LC1492_TheKthFactorOfN sol = new LC1492_TheKthFactorOfN();
-        System.out.println(sol.kthFactor(12, 3));  // 3
-        System.out.println(sol.kthFactor(7, 2));   // 7
-        System.out.println(sol.kthFactor(4, 4));   // -1
+        Check.start("LC1492_TheKthFactorOfN");
+        Check.eq("3", () -> sol.kthFactor(12, 3));
+        Check.eq("7", () -> sol.kthFactor(7, 2));
+        Check.eq("-1", () -> sol.kthFactor(4, 4));
+        Check.summary();
     }
 }

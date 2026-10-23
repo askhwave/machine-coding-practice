@@ -41,7 +41,9 @@ public class LC0011_ContainerWithMostWater {
 
     public static void main(String[] args) {
         LC0011_ContainerWithMostWater sol = new LC0011_ContainerWithMostWater();
-        System.out.println(sol.maxArea(new int[]{1,8,6,2,5,4,8,3,7})); // 49
-        System.out.println(sol.maxArea(new int[]{1,1}));               // 1
+        Check.start("LC0011_ContainerWithMostWater");
+        Check.eq("49", () -> sol.maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
+        Check.eq("1", () -> sol.maxArea(new int[]{1,1}));
+        Check.summary();
     }
 }

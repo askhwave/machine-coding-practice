@@ -44,8 +44,10 @@ public class LC0219_ContainsDuplicateII {
 
     public static void main(String[] args) {
         LC0219_ContainsDuplicateII sol = new LC0219_ContainsDuplicateII();
-        System.out.println(sol.containsNearbyDuplicate(new int[]{1,2,3,1}, 3));       // true
-        System.out.println(sol.containsNearbyDuplicate(new int[]{1,0,1,1}, 1));       // true
-        System.out.println(sol.containsNearbyDuplicate(new int[]{1,2,3,1,2,3}, 2));   // false
+        Check.start("LC0219_ContainsDuplicateII");
+        Check.eq("true", () -> sol.containsNearbyDuplicate(new int[]{1,2,3,1}, 3));
+        Check.eq("true", () -> sol.containsNearbyDuplicate(new int[]{1,0,1,1}, 1));
+        Check.eq("false", () -> sol.containsNearbyDuplicate(new int[]{1,2,3,1,2,3}, 2));
+        Check.summary();
     }
 }

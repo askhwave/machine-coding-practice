@@ -37,7 +37,9 @@ public class LC0028_FindTheIndexOfTheFirstOccurrenceInAString {
 
     public static void main(String[] args) {
         LC0028_FindTheIndexOfTheFirstOccurrenceInAString sol = new LC0028_FindTheIndexOfTheFirstOccurrenceInAString();
-        System.out.println(sol.strStr("sadbutsad", "sad"));  // 0
-        System.out.println(sol.strStr("leetcode", "leeto")); // -1
+        Check.start("LC0028_FindTheIndexOfTheFirstOccurrenceInAString");
+        Check.eq("0", () -> sol.strStr("sadbutsad", "sad"));
+        Check.eq("-1", () -> sol.strStr("leetcode", "leeto"));
+        Check.summary();
     }
 }

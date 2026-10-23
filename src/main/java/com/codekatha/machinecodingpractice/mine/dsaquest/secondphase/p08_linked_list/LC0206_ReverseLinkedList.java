@@ -44,8 +44,10 @@ public class LC0206_ReverseLinkedList {
 
     public static void main(String[] args) {
         LC0206_ReverseLinkedList sol = new LC0206_ReverseLinkedList();
-        System.out.println(sol.reverseList(ListNode.of(1,2,3,4,5))); // 5->4->3->2->1
-        System.out.println(sol.reverseList(ListNode.of(1,2)));       // 2->1
-        System.out.println(sol.reverseList(null));                    // null
+        Check.start("LC0206_ReverseLinkedList");
+        Check.eq("5->4->3->2->1", () -> sol.reverseList(ListNode.of(1,2,3,4,5)));
+        Check.eq("2->1", () -> sol.reverseList(ListNode.of(1,2)));
+        Check.eq("null", () -> sol.reverseList(null));
+        Check.summary();
     }
 }

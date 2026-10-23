@@ -46,8 +46,10 @@ public class LC0102_BinaryTreeLevelOrderTraversal {
 
     public static void main(String[] args) {
         LC0102_BinaryTreeLevelOrderTraversal sol = new LC0102_BinaryTreeLevelOrderTraversal();
-        System.out.println(sol.levelOrder(TreeNode.of(3,9,20,null,null,15,7))); // [[3], [9, 20], [15, 7]]
-        System.out.println(sol.levelOrder(TreeNode.of(1)));                     // [[1]]
-        System.out.println(sol.levelOrder(null));                              // []
+        Check.start("LC0102_BinaryTreeLevelOrderTraversal");
+        Check.eq("[[3], [9, 20], [15, 7]]", () -> sol.levelOrder(TreeNode.of(3,9,20,null,null,15,7)));
+        Check.eq("[[1]]", () -> sol.levelOrder(TreeNode.of(1)));
+        Check.eq("[]", () -> sol.levelOrder(null));
+        Check.summary();
     }
 }

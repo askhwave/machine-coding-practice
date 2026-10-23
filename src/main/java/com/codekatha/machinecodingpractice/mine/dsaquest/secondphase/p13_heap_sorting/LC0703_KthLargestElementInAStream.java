@@ -46,11 +46,13 @@ public class LC0703_KthLargestElementInAStream {
 
     public static void main(String[] args) {
         LC0703_KthLargestElementInAStream sol = new LC0703_KthLargestElementInAStream();
+        Check.start("LC0703_KthLargestElementInAStream");
         KthLargest kl = new KthLargest(3, new int[]{4,5,8,2});
-        System.out.println(kl.add(3));  // 4
-        System.out.println(kl.add(5));  // 5
-        System.out.println(kl.add(10)); // 5
-        System.out.println(kl.add(9));  // 8
-        System.out.println(kl.add(4));  // 8
+        Check.eq("4", () -> kl.add(3));
+        Check.eq("5", () -> kl.add(5));
+        Check.eq("5", () -> kl.add(10));
+        Check.eq("8", () -> kl.add(9));
+        Check.eq("8", () -> kl.add(4));
+        Check.summary();
     }
 }

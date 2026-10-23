@@ -44,8 +44,10 @@ public class LC0383_RansomNote {
 
     public static void main(String[] args) {
         LC0383_RansomNote sol = new LC0383_RansomNote();
-        System.out.println(sol.canConstruct("a", "b"));    // false
-        System.out.println(sol.canConstruct("aa", "ab"));  // false
-        System.out.println(sol.canConstruct("aa", "aab")); // true
+        Check.start("LC0383_RansomNote");
+        Check.eq("false", () -> sol.canConstruct("a", "b"));
+        Check.eq("false", () -> sol.canConstruct("aa", "ab"));
+        Check.eq("true", () -> sol.canConstruct("aa", "aab"));
+        Check.summary();
     }
 }

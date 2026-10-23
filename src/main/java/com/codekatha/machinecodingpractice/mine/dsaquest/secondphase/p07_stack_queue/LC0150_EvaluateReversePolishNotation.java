@@ -49,8 +49,10 @@ public class LC0150_EvaluateReversePolishNotation {
 
     public static void main(String[] args) {
         LC0150_EvaluateReversePolishNotation sol = new LC0150_EvaluateReversePolishNotation();
-        System.out.println(sol.evalRPN(new String[]{"2","1","+","3","*"}));        // 9
-        System.out.println(sol.evalRPN(new String[]{"4","13","5","/","+"}));      // 6
-        System.out.println(sol.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"})); // 22
+        Check.start("LC0150_EvaluateReversePolishNotation");
+        Check.eq("9", () -> sol.evalRPN(new String[]{"2","1","+","3","*"}));
+        Check.eq("6", () -> sol.evalRPN(new String[]{"4","13","5","/","+"}));
+        Check.eq("22", () -> sol.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
+        Check.summary();
     }
 }

@@ -44,8 +44,10 @@ public class LC0191_NumberOf1Bits {
 
     public static void main(String[] args) {
         LC0191_NumberOf1Bits sol = new LC0191_NumberOf1Bits();
-        System.out.println(sol.hammingWeight(11));          // 3
-        System.out.println(sol.hammingWeight(128));         // 1
-        System.out.println(sol.hammingWeight(2147483645));  // 30
+        Check.start("LC0191_NumberOf1Bits");
+        Check.eq("3", () -> sol.hammingWeight(11));
+        Check.eq("1", () -> sol.hammingWeight(128));
+        Check.eq("30", () -> sol.hammingWeight(2147483645));
+        Check.summary();
     }
 }

@@ -41,7 +41,9 @@ public class LC0239_SlidingWindowMaximum {
 
     public static void main(String[] args) {
         LC0239_SlidingWindowMaximum sol = new LC0239_SlidingWindowMaximum();
-        System.out.println(Arrays.toString(sol.maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3))); // [3, 3, 5, 5, 6, 7]
-        System.out.println(Arrays.toString(sol.maxSlidingWindow(new int[]{1}, 1)));                 // [1]
+        Check.start("LC0239_SlidingWindowMaximum");
+        Check.eq("[3, 3, 5, 5, 6, 7]", () -> Arrays.toString(sol.maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7}, 3)));
+        Check.eq("[1]", () -> Arrays.toString(sol.maxSlidingWindow(new int[]{1}, 1)));
+        Check.summary();
     }
 }

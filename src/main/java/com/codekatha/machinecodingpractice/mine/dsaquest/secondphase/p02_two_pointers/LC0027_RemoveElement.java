@@ -43,8 +43,10 @@ public class LC0027_RemoveElement {
 
     public static void main(String[] args) {
         LC0027_RemoveElement sol = new LC0027_RemoveElement();
+        Check.start("LC0027_RemoveElement");
         int[] a = {3,2,2,3};
         int k = sol.removeElement(a, 3);
-        System.out.println(k + " " + Arrays.toString(Arrays.copyOf(a, k))); // 2 [2, 2]
+        Check.eq("2 [2, 2]", () -> k + " " + Arrays.toString(Arrays.copyOf(a, k)));
+        Check.summary();
     }
 }

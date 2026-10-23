@@ -42,7 +42,9 @@ public class LC0134_GasStation {
 
     public static void main(String[] args) {
         LC0134_GasStation sol = new LC0134_GasStation();
-        System.out.println(sol.canCompleteCircuit(new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2})); // 3
-        System.out.println(sol.canCompleteCircuit(new int[]{2,3,4}, new int[]{3,4,3}));         // -1
+        Check.start("LC0134_GasStation");
+        Check.eq("3", () -> sol.canCompleteCircuit(new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2}));
+        Check.eq("-1", () -> sol.canCompleteCircuit(new int[]{2,3,4}, new int[]{3,4,3}));
+        Check.summary();
     }
 }

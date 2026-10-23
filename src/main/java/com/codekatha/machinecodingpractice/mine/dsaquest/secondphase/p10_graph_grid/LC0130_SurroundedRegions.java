@@ -43,8 +43,10 @@ public class LC0130_SurroundedRegions {
 
     public static void main(String[] args) {
         LC0130_SurroundedRegions sol = new LC0130_SurroundedRegions();
+        Check.start("LC0130_SurroundedRegions");
         char[][] b = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         sol.solve(b);
-        System.out.println(Arrays.deepToString(b)); // only bottom O stays: [[X,X,X,X],[X,X,X,X],[X,X,X,X],[X,O,X,X]]
+        Check.eq("[[X, X, X, X], [X, X, X, X], [X, X, X, X], [X, O, X, X]]", () -> Arrays.deepToString(b));
+        Check.summary();
     }
 }

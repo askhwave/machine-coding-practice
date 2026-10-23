@@ -44,8 +44,10 @@ public class LC1464_MaximumProductOfTwoElementsInAnArray {
 
     public static void main(String[] args) {
         LC1464_MaximumProductOfTwoElementsInAnArray sol = new LC1464_MaximumProductOfTwoElementsInAnArray();
-        System.out.println(sol.maxProduct(new int[]{3,4,5,2})); // 12
-        System.out.println(sol.maxProduct(new int[]{1,5,4,5})); // 16
-        System.out.println(sol.maxProduct(new int[]{3,7}));     // 12
+        Check.start("LC1464_MaximumProductOfTwoElementsInAnArray");
+        Check.eq("12", () -> sol.maxProduct(new int[]{3,4,5,2}));
+        Check.eq("16", () -> sol.maxProduct(new int[]{1,5,4,5}));
+        Check.eq("12", () -> sol.maxProduct(new int[]{3,7}));
+        Check.summary();
     }
 }

@@ -42,7 +42,9 @@ public class LC1582_SpecialPositionsInABinaryMatrix {
 
     public static void main(String[] args) {
         LC1582_SpecialPositionsInABinaryMatrix sol = new LC1582_SpecialPositionsInABinaryMatrix();
-        System.out.println(sol.numSpecial(new int[][]{{1,0,0},{0,0,1},{1,0,0}})); // 1
-        System.out.println(sol.numSpecial(new int[][]{{1,0,0},{0,1,0},{0,0,1}})); // 3
+        Check.start("LC1582_SpecialPositionsInABinaryMatrix");
+        Check.eq("1", () -> sol.numSpecial(new int[][]{{1,0,0},{0,0,1},{1,0,0}}));
+        Check.eq("3", () -> sol.numSpecial(new int[][]{{1,0,0},{0,1,0},{0,0,1}}));
+        Check.summary();
     }
 }

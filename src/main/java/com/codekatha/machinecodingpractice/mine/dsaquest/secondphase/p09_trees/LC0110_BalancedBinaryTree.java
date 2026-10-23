@@ -45,8 +45,10 @@ public class LC0110_BalancedBinaryTree {
 
     public static void main(String[] args) {
         LC0110_BalancedBinaryTree sol = new LC0110_BalancedBinaryTree();
-        System.out.println(sol.isBalanced(TreeNode.of(3,9,20,null,null,15,7)));         // true
-        System.out.println(sol.isBalanced(TreeNode.of(1,2,2,3,3,null,null,4,4)));       // false
-        System.out.println(sol.isBalanced(null));                                         // true
+        Check.start("LC0110_BalancedBinaryTree");
+        Check.eq("true", () -> sol.isBalanced(TreeNode.of(3,9,20,null,null,15,7)));
+        Check.eq("false", () -> sol.isBalanced(TreeNode.of(1,2,2,3,3,null,null,4,4)));
+        Check.eq("true", () -> sol.isBalanced(null));
+        Check.summary();
     }
 }

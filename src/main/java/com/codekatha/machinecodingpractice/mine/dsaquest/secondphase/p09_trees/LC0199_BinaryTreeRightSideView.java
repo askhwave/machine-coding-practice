@@ -46,8 +46,10 @@ public class LC0199_BinaryTreeRightSideView {
 
     public static void main(String[] args) {
         LC0199_BinaryTreeRightSideView sol = new LC0199_BinaryTreeRightSideView();
-        System.out.println(sol.rightSideView(TreeNode.of(1,2,3,null,5,null,4)));        // [1, 3, 4]
-        System.out.println(sol.rightSideView(TreeNode.of(1,2,3,4,null,null,null,5)));   // [1, 3, 4, 5]
-        System.out.println(sol.rightSideView(TreeNode.of(1,null,3)));                   // [1, 3]
+        Check.start("LC0199_BinaryTreeRightSideView");
+        Check.eq("[1, 3, 4]", () -> sol.rightSideView(TreeNode.of(1,2,3,null,5,null,4)));
+        Check.eq("[1, 3, 4, 5]", () -> sol.rightSideView(TreeNode.of(1,2,3,4,null,null,null,5)));
+        Check.eq("[1, 3]", () -> sol.rightSideView(TreeNode.of(1,null,3)));
+        Check.summary();
     }
 }

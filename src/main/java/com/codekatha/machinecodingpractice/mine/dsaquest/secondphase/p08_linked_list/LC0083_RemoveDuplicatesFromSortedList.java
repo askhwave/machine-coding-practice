@@ -39,7 +39,9 @@ public class LC0083_RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
         LC0083_RemoveDuplicatesFromSortedList sol = new LC0083_RemoveDuplicatesFromSortedList();
-        System.out.println(sol.deleteDuplicates(ListNode.of(1,1,2)));       // 1->2
-        System.out.println(sol.deleteDuplicates(ListNode.of(1,1,2,3,3)));   // 1->2->3
+        Check.start("LC0083_RemoveDuplicatesFromSortedList");
+        Check.eq("1->2", () -> sol.deleteDuplicates(ListNode.of(1,1,2)));
+        Check.eq("1->2->3", () -> sol.deleteDuplicates(ListNode.of(1,1,2,3,3)));
+        Check.summary();
     }
 }

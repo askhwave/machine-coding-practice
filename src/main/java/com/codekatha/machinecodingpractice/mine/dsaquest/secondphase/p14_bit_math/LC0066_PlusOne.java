@@ -47,8 +47,10 @@ public class LC0066_PlusOne {
 
     public static void main(String[] args) {
         LC0066_PlusOne sol = new LC0066_PlusOne();
-        System.out.println(Arrays.toString(sol.plusOne(new int[]{1,2,3})));    // [1, 2, 4]
-        System.out.println(Arrays.toString(sol.plusOne(new int[]{4,3,2,1})));  // [4, 3, 2, 2]
-        System.out.println(Arrays.toString(sol.plusOne(new int[]{9,9})));      // [1, 0, 0]
+        Check.start("LC0066_PlusOne");
+        Check.eq("[1, 2, 4]", () -> Arrays.toString(sol.plusOne(new int[]{1,2,3})));
+        Check.eq("[4, 3, 2, 2]", () -> Arrays.toString(sol.plusOne(new int[]{4,3,2,1})));
+        Check.eq("[1, 0, 0]", () -> Arrays.toString(sol.plusOne(new int[]{9,9})));
+        Check.summary();
     }
 }

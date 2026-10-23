@@ -46,8 +46,10 @@ public class LC0739_DailyTemperatures {
 
     public static void main(String[] args) {
         LC0739_DailyTemperatures sol = new LC0739_DailyTemperatures();
-        System.out.println(Arrays.toString(sol.dailyTemperatures(new int[]{73,74,75,71,69,72,76,73}))); // [1, 1, 4, 2, 1, 1, 0, 0]
-        System.out.println(Arrays.toString(sol.dailyTemperatures(new int[]{30,40,50,60})));             // [1, 1, 1, 0]
-        System.out.println(Arrays.toString(sol.dailyTemperatures(new int[]{30,60,90})));                // [1, 1, 0]
+        Check.start("LC0739_DailyTemperatures");
+        Check.eq("[1, 1, 4, 2, 1, 1, 0, 0]", () -> Arrays.toString(sol.dailyTemperatures(new int[]{73,74,75,71,69,72,76,73})));
+        Check.eq("[1, 1, 1, 0]", () -> Arrays.toString(sol.dailyTemperatures(new int[]{30,40,50,60})));
+        Check.eq("[1, 1, 0]", () -> Arrays.toString(sol.dailyTemperatures(new int[]{30,60,90})));
+        Check.summary();
     }
 }

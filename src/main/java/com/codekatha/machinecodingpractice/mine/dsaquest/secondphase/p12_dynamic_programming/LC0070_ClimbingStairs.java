@@ -38,8 +38,10 @@ public class LC0070_ClimbingStairs {
 
     public static void main(String[] args) {
         LC0070_ClimbingStairs sol = new LC0070_ClimbingStairs();
-        System.out.println(sol.climbStairs(2));  // 2
-        System.out.println(sol.climbStairs(3));  // 3
-        System.out.println(sol.climbStairs(45)); // 1836311903
+        Check.start("LC0070_ClimbingStairs");
+        Check.eq("2", () -> sol.climbStairs(2));
+        Check.eq("3", () -> sol.climbStairs(3));
+        Check.eq("1836311903", () -> sol.climbStairs(45));
+        Check.summary();
     }
 }

@@ -45,8 +45,10 @@ public class LC0125_ValidPalindrome {
 
     public static void main(String[] args) {
         LC0125_ValidPalindrome sol = new LC0125_ValidPalindrome();
-        System.out.println(sol.isPalindrome("A man, a plan, a canal: Panama")); // true
-        System.out.println(sol.isPalindrome("race a car"));                    // false
-        System.out.println(sol.isPalindrome(" "));                             // true
+        Check.start("LC0125_ValidPalindrome");
+        Check.eq("true", () -> sol.isPalindrome("A man, a plan, a canal: Panama"));
+        Check.eq("false", () -> sol.isPalindrome("race a car"));
+        Check.eq("true", () -> sol.isPalindrome(" "));
+        Check.summary();
     }
 }

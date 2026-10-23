@@ -43,9 +43,11 @@ public class LC0509_FibonacciNumber {
 
     public static void main(String[] args) {
         LC0509_FibonacciNumber sol = new LC0509_FibonacciNumber();
-        System.out.println(sol.fib(2));  // 1
-        System.out.println(sol.fib(3));  // 2
-        System.out.println(sol.fib(4));  // 3
-        System.out.println(sol.fib(30)); // 832040
+        Check.start("LC0509_FibonacciNumber");
+        Check.eq("1", () -> sol.fib(2));
+        Check.eq("2", () -> sol.fib(3));
+        Check.eq("3", () -> sol.fib(4));
+        Check.eq("832040", () -> sol.fib(30));
+        Check.summary();
     }
 }

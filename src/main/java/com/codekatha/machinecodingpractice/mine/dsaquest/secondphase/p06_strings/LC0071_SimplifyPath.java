@@ -61,9 +61,11 @@ public class LC0071_SimplifyPath {
 
     public static void main(String[] args) {
         LC0071_SimplifyPath sol = new LC0071_SimplifyPath();
-        System.out.println(sol.simplifyPath("/home/"));                          // /home
-        System.out.println(sol.simplifyPath("/home//foo/"));                     // /home/foo
-        System.out.println(sol.simplifyPath("/../"));                            // /
-        System.out.println(sol.simplifyPath("/.../a/../b/c/../d/./"));            // /.../b/d
+        Check.start("LC0071_SimplifyPath");
+        Check.eq("/home", () -> sol.simplifyPath("/home/"));
+        Check.eq("/home/foo", () -> sol.simplifyPath("/home//foo/"));
+        Check.eq("/", () -> sol.simplifyPath("/../"));
+        Check.eq("/.../b/d", () -> sol.simplifyPath("/.../a/../b/c/../d/./"));
+        Check.summary();
     }
 }

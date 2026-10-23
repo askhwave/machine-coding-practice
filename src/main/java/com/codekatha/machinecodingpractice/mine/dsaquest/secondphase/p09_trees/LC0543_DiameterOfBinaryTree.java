@@ -41,7 +41,9 @@ public class LC0543_DiameterOfBinaryTree {
 
     public static void main(String[] args) {
         LC0543_DiameterOfBinaryTree sol = new LC0543_DiameterOfBinaryTree();
-        System.out.println(sol.diameterOfBinaryTree(TreeNode.of(1,2,3,4,5))); // 3
-        System.out.println(sol.diameterOfBinaryTree(TreeNode.of(1,2)));       // 1
+        Check.start("LC0543_DiameterOfBinaryTree");
+        Check.eq("3", () -> sol.diameterOfBinaryTree(TreeNode.of(1,2,3,4,5)));
+        Check.eq("1", () -> sol.diameterOfBinaryTree(TreeNode.of(1,2)));
+        Check.summary();
     }
 }

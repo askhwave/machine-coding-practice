@@ -44,8 +44,10 @@ public class LC0012_IntegerToRoman {
 
     public static void main(String[] args) {
         LC0012_IntegerToRoman sol = new LC0012_IntegerToRoman();
-        System.out.println(sol.intToRoman(3749)); // MMMDCCXLIX
-        System.out.println(sol.intToRoman(58));   // LVIII
-        System.out.println(sol.intToRoman(1994)); // MCMXCIV
+        Check.start("LC0012_IntegerToRoman");
+        Check.eq("MMMDCCXLIX", () -> sol.intToRoman(3749));
+        Check.eq("LVIII", () -> sol.intToRoman(58));
+        Check.eq("MCMXCIV", () -> sol.intToRoman(1994));
+        Check.summary();
     }
 }

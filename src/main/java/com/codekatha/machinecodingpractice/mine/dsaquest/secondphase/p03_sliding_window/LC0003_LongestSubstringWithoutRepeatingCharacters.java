@@ -44,9 +44,11 @@ public class LC0003_LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         LC0003_LongestSubstringWithoutRepeatingCharacters sol = new LC0003_LongestSubstringWithoutRepeatingCharacters();
-        System.out.println(sol.lengthOfLongestSubstring("abcabcbb")); // 3
-        System.out.println(sol.lengthOfLongestSubstring("bbbbb"));    // 1
-        System.out.println(sol.lengthOfLongestSubstring("pwwkew"));   // 3
-        System.out.println(sol.lengthOfLongestSubstring("abba"));     // 2
+        Check.start("LC0003_LongestSubstringWithoutRepeatingCharacters");
+        Check.eq("3", () -> sol.lengthOfLongestSubstring("abcabcbb"));
+        Check.eq("1", () -> sol.lengthOfLongestSubstring("bbbbb"));
+        Check.eq("3", () -> sol.lengthOfLongestSubstring("pwwkew"));
+        Check.eq("2", () -> sol.lengthOfLongestSubstring("abba"));
+        Check.summary();
     }
 }

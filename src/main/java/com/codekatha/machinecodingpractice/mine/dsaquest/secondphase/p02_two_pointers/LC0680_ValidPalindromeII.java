@@ -44,8 +44,10 @@ public class LC0680_ValidPalindromeII {
 
     public static void main(String[] args) {
         LC0680_ValidPalindromeII sol = new LC0680_ValidPalindromeII();
-        System.out.println(sol.validPalindrome("aba"));  // true
-        System.out.println(sol.validPalindrome("abca")); // true
-        System.out.println(sol.validPalindrome("abc"));  // false
+        Check.start("LC0680_ValidPalindromeII");
+        Check.eq("true", () -> sol.validPalindrome("aba"));
+        Check.eq("true", () -> sol.validPalindrome("abca"));
+        Check.eq("false", () -> sol.validPalindrome("abc"));
+        Check.summary();
     }
 }

@@ -55,10 +55,12 @@ public class LC0232_ImplementQueueUsingStacks {
 
     public static void main(String[] args) {
         LC0232_ImplementQueueUsingStacks sol = new LC0232_ImplementQueueUsingStacks();
+        Check.start("LC0232_ImplementQueueUsingStacks");
         MyQueue q = new MyQueue();
         q.push(1); q.push(2);
-        System.out.println(q.peek());  // 1
-        System.out.println(q.pop());   // 1
-        System.out.println(q.empty()); // false
+        Check.eq("1", () -> q.peek());
+        Check.eq("1", () -> q.pop());
+        Check.eq("false", () -> q.empty());
+        Check.summary();
     }
 }

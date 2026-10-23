@@ -42,9 +42,11 @@ public class LC0204_CountPrimes {
 
     public static void main(String[] args) {
         LC0204_CountPrimes sol = new LC0204_CountPrimes();
-        System.out.println(sol.countPrimes(10));        // 4
-        System.out.println(sol.countPrimes(0));         // 0
-        System.out.println(sol.countPrimes(1));         // 0
-        System.out.println(sol.countPrimes(5000000));   // 348513
+        Check.start("LC0204_CountPrimes");
+        Check.eq("4", () -> sol.countPrimes(10));
+        Check.eq("0", () -> sol.countPrimes(0));
+        Check.eq("0", () -> sol.countPrimes(1));
+        Check.eq("348513", () -> sol.countPrimes(5000000));
+        Check.summary();
     }
 }

@@ -45,7 +45,9 @@ public class LC0547_NumberOfProvinces {
 
     public static void main(String[] args) {
         LC0547_NumberOfProvinces sol = new LC0547_NumberOfProvinces();
-        System.out.println(sol.findCircleNum(new int[][]{{1,1,0},{1,1,0},{0,0,1}})); // 2
-        System.out.println(sol.findCircleNum(new int[][]{{1,0,0},{0,1,0},{0,0,1}})); // 3
+        Check.start("LC0547_NumberOfProvinces");
+        Check.eq("2", () -> sol.findCircleNum(new int[][]{{1,1,0},{1,1,0},{0,0,1}}));
+        Check.eq("3", () -> sol.findCircleNum(new int[][]{{1,0,0},{0,1,0},{0,0,1}}));
+        Check.summary();
     }
 }

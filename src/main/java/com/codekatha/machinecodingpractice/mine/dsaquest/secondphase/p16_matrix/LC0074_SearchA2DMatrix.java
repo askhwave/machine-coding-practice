@@ -41,8 +41,10 @@ public class LC0074_SearchA2DMatrix {
 
     public static void main(String[] args) {
         LC0074_SearchA2DMatrix sol = new LC0074_SearchA2DMatrix();
+        Check.start("LC0074_SearchA2DMatrix");
         int[][] m = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
-        System.out.println(sol.searchMatrix(m, 3));   // true
-        System.out.println(sol.searchMatrix(m, 13));  // false
+        Check.eq("true", () -> sol.searchMatrix(m, 3));
+        Check.eq("false", () -> sol.searchMatrix(m, 13));
+        Check.summary();
     }
 }

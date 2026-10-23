@@ -48,8 +48,10 @@ public class LC0002_AddTwoNumbers {
 
     public static void main(String[] args) {
         LC0002_AddTwoNumbers sol = new LC0002_AddTwoNumbers();
-        System.out.println(sol.addTwoNumbers(ListNode.of(2,4,3), ListNode.of(5,6,4)));                   // 7->0->8
-        System.out.println(sol.addTwoNumbers(ListNode.of(0), ListNode.of(0)));                           // 0
-        System.out.println(sol.addTwoNumbers(ListNode.of(9,9,9,9,9,9,9), ListNode.of(9,9,9,9)));           // 8->9->9->9->0->0->0->1
+        Check.start("LC0002_AddTwoNumbers");
+        Check.eq("7->0->8", () -> sol.addTwoNumbers(ListNode.of(2,4,3), ListNode.of(5,6,4)));
+        Check.eq("0", () -> sol.addTwoNumbers(ListNode.of(0), ListNode.of(0)));
+        Check.eq("8->9->9->9->0->0->0->1", () -> sol.addTwoNumbers(ListNode.of(9,9,9,9,9,9,9), ListNode.of(9,9,9,9)));
+        Check.summary();
     }
 }

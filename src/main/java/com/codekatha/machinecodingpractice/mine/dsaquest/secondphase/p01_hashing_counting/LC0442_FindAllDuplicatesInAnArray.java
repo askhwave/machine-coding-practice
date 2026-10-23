@@ -48,8 +48,10 @@ public class LC0442_FindAllDuplicatesInAnArray {
 
     public static void main(String[] args) {
         LC0442_FindAllDuplicatesInAnArray sol = new LC0442_FindAllDuplicatesInAnArray();
-        System.out.println(sol.findDuplicates(new int[]{4,3,2,7,8,2,3,1})); // [2, 3]
-        System.out.println(sol.findDuplicates(new int[]{1,1,2}));           // [1]
-        System.out.println(sol.findDuplicates(new int[]{1}));               // []
+        Check.start("LC0442_FindAllDuplicatesInAnArray");
+        Check.sameElements("[2, 3]", () -> sol.findDuplicates(new int[]{4,3,2,7,8,2,3,1}));
+        Check.sameElements("[1]", () -> sol.findDuplicates(new int[]{1,1,2}));
+        Check.sameElements("[]", () -> sol.findDuplicates(new int[]{1}));
+        Check.summary();
     }
 }

@@ -41,7 +41,9 @@ public class LC1688_CountOfMatchesInTournament {
 
     public static void main(String[] args) {
         LC1688_CountOfMatchesInTournament sol = new LC1688_CountOfMatchesInTournament();
-        System.out.println(sol.numberOfMatches(7));   // 6
-        System.out.println(sol.numberOfMatches(14));  // 13
+        Check.start("LC1688_CountOfMatchesInTournament");
+        Check.eq("6", () -> sol.numberOfMatches(7));
+        Check.eq("13", () -> sol.numberOfMatches(14));
+        Check.summary();
     }
 }

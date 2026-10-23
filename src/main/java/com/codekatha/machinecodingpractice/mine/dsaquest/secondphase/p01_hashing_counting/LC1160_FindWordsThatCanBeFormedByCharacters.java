@@ -40,7 +40,9 @@ public class LC1160_FindWordsThatCanBeFormedByCharacters {
 
     public static void main(String[] args) {
         LC1160_FindWordsThatCanBeFormedByCharacters sol = new LC1160_FindWordsThatCanBeFormedByCharacters();
-        System.out.println(sol.countCharacters(new String[]{"cat","bt","hat","tree"}, "atach")); // 6
-        System.out.println(sol.countCharacters(new String[]{"hello","world","leetcode"}, "welldonehoneyr")); // 10
+        Check.start("LC1160_FindWordsThatCanBeFormedByCharacters");
+        Check.eq("6", () -> sol.countCharacters(new String[]{"cat","bt","hat","tree"}, "atach"));
+        Check.eq("10", () -> sol.countCharacters(new String[]{"hello","world","leetcode"}, "welldonehoneyr"));
+        Check.summary();
     }
 }

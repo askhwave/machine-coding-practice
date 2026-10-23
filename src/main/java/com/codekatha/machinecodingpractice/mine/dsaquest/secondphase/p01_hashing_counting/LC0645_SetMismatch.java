@@ -42,7 +42,9 @@ public class LC0645_SetMismatch {
 
     public static void main(String[] args) {
         LC0645_SetMismatch sol = new LC0645_SetMismatch();
-        System.out.println(Arrays.toString(sol.findErrorNums(new int[]{1,2,2,4}))); // [2, 3]
-        System.out.println(Arrays.toString(sol.findErrorNums(new int[]{1,1})));     // [1, 2]
+        Check.start("LC0645_SetMismatch");
+        Check.eq("[2, 3]", () -> Arrays.toString(sol.findErrorNums(new int[]{1,2,2,4})));
+        Check.eq("[1, 2]", () -> Arrays.toString(sol.findErrorNums(new int[]{1,1})));
+        Check.summary();
     }
 }

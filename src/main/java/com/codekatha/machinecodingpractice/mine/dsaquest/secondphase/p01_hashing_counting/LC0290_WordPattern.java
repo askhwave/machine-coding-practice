@@ -47,8 +47,10 @@ public class LC0290_WordPattern {
 
     public static void main(String[] args) {
         LC0290_WordPattern sol = new LC0290_WordPattern();
-        System.out.println(sol.wordPattern("abba", "dog cat cat dog"));  // true
-        System.out.println(sol.wordPattern("abba", "dog cat cat fish")); // false
-        System.out.println(sol.wordPattern("aaaa", "dog cat cat dog")); // false
+        Check.start("LC0290_WordPattern");
+        Check.eq("true", () -> sol.wordPattern("abba", "dog cat cat dog"));
+        Check.eq("false", () -> sol.wordPattern("abba", "dog cat cat fish"));
+        Check.eq("false", () -> sol.wordPattern("aaaa", "dog cat cat dog"));
+        Check.summary();
     }
 }

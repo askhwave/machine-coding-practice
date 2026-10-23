@@ -43,8 +43,10 @@ public class LC0387_FirstUniqueCharacterInAString {
 
     public static void main(String[] args) {
         LC0387_FirstUniqueCharacterInAString sol = new LC0387_FirstUniqueCharacterInAString();
-        System.out.println(sol.firstUniqChar("leetcode"));     // 0
-        System.out.println(sol.firstUniqChar("loveleetcode")); // 2
-        System.out.println(sol.firstUniqChar("aabb"));         // -1
+        Check.start("LC0387_FirstUniqueCharacterInAString");
+        Check.eq("0", () -> sol.firstUniqChar("leetcode"));
+        Check.eq("2", () -> sol.firstUniqChar("loveleetcode"));
+        Check.eq("-1", () -> sol.firstUniqChar("aabb"));
+        Check.summary();
     }
 }

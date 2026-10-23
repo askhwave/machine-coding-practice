@@ -54,9 +54,11 @@ public class LC1095_FindInMountainArray {
 
     public static void main(String[] args) {
         LC1095_FindInMountainArray sol = new LC1095_FindInMountainArray();
+        Check.start("LC1095_FindInMountainArray");
         MountainArray m1 = new MountainArray(new int[]{1,2,3,4,5,3,1});
-        System.out.println(sol.findInMountainArray(3, m1)); // 2
+        Check.eq("2", () -> sol.findInMountainArray(3, m1));
         MountainArray m2 = new MountainArray(new int[]{0,1,2,4,2,1});
-        System.out.println(sol.findInMountainArray(3, m2)); // -1
+        Check.eq("-1", () -> sol.findInMountainArray(3, m2));
+        Check.summary();
     }
 }

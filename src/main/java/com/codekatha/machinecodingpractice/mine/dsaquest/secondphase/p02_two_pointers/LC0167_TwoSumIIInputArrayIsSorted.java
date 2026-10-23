@@ -51,8 +51,10 @@ public class LC0167_TwoSumIIInputArrayIsSorted {
 
     public static void main(String[] args) {
         LC0167_TwoSumIIInputArrayIsSorted sol = new LC0167_TwoSumIIInputArrayIsSorted();
-        System.out.println(Arrays.toString(sol.twoSum(new int[]{2,7,11,15}, 9))); // [1, 2]
-        System.out.println(Arrays.toString(sol.twoSum(new int[]{2,3,4}, 6)));    // [1, 3]
-        System.out.println(Arrays.toString(sol.twoSum(new int[]{-1,0}, -1)));    // [1, 2]
+        Check.start("LC0167_TwoSumIIInputArrayIsSorted");
+        Check.eq("[1, 2]", () -> Arrays.toString(sol.twoSum(new int[]{2,7,11,15}, 9)));
+        Check.eq("[1, 3]", () -> Arrays.toString(sol.twoSum(new int[]{2,3,4}, 6)));
+        Check.eq("[1, 2]", () -> Arrays.toString(sol.twoSum(new int[]{-1,0}, -1)));
+        Check.summary();
     }
 }

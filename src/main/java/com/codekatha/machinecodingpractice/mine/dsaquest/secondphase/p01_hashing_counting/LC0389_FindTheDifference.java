@@ -38,7 +38,9 @@ public class LC0389_FindTheDifference {
 
     public static void main(String[] args) {
         LC0389_FindTheDifference sol = new LC0389_FindTheDifference();
-        System.out.println(sol.findTheDifference("abcd", "abcde")); // e
-        System.out.println(sol.findTheDifference("", "y"));          // y
+        Check.start("LC0389_FindTheDifference");
+        Check.eq("e", () -> sol.findTheDifference("abcd", "abcde"));
+        Check.eq("y", () -> sol.findTheDifference("", "y"));
+        Check.summary();
     }
 }

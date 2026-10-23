@@ -46,8 +46,10 @@ public class LC0006_ZigzagConversion {
 
     public static void main(String[] args) {
         LC0006_ZigzagConversion sol = new LC0006_ZigzagConversion();
-        System.out.println(sol.convert("PAYPALISHIRING", 3)); // PAHNAPLSIIGYIR
-        System.out.println(sol.convert("PAYPALISHIRING", 4)); // PINALSIGYAHRPI
-        System.out.println(sol.convert("A", 1));              // A
+        Check.start("LC0006_ZigzagConversion");
+        Check.eq("PAHNAPLSIIGYIR", () -> sol.convert("PAYPALISHIRING", 3));
+        Check.eq("PINALSIGYAHRPI", () -> sol.convert("PAYPALISHIRING", 4));
+        Check.eq("A", () -> sol.convert("A", 1));
+        Check.summary();
     }
 }

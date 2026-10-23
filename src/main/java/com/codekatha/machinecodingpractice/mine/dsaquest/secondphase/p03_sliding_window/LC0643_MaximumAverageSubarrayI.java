@@ -40,7 +40,9 @@ public class LC0643_MaximumAverageSubarrayI {
 
     public static void main(String[] args) {
         LC0643_MaximumAverageSubarrayI sol = new LC0643_MaximumAverageSubarrayI();
-        System.out.println(sol.findMaxAverage(new int[]{1,12,-5,-6,50,3}, 4)); // 12.75
-        System.out.println(sol.findMaxAverage(new int[]{5}, 1));               // 5.0
+        Check.start("LC0643_MaximumAverageSubarrayI");
+        Check.eq("12.75", () -> sol.findMaxAverage(new int[]{1,12,-5,-6,50,3}, 4));
+        Check.eq("5.0", () -> sol.findMaxAverage(new int[]{5}, 1));
+        Check.summary();
     }
 }

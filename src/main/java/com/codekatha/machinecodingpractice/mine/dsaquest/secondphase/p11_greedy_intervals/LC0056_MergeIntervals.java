@@ -42,7 +42,9 @@ public class LC0056_MergeIntervals {
 
     public static void main(String[] args) {
         LC0056_MergeIntervals sol = new LC0056_MergeIntervals();
-        System.out.println(Arrays.deepToString(sol.merge(new int[][]{{1,3},{2,6},{8,10},{15,18}}))); // [[1, 6], [8, 10], [15, 18]]
-        System.out.println(Arrays.deepToString(sol.merge(new int[][]{{1,4},{4,5}})));               // [[1, 5]]
+        Check.start("LC0056_MergeIntervals");
+        Check.eq("[[1, 6], [8, 10], [15, 18]]", () -> Arrays.deepToString(sol.merge(new int[][]{{1,3},{2,6},{8,10},{15,18}})));
+        Check.eq("[[1, 5]]", () -> Arrays.deepToString(sol.merge(new int[][]{{1,4},{4,5}})));
+        Check.summary();
     }
 }

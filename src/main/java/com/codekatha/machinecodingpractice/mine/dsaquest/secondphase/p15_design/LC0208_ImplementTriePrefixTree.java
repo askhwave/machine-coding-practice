@@ -51,12 +51,14 @@ public class LC0208_ImplementTriePrefixTree {
 
     public static void main(String[] args) {
         LC0208_ImplementTriePrefixTree sol = new LC0208_ImplementTriePrefixTree();
+        Check.start("LC0208_ImplementTriePrefixTree");
         Trie t = new Trie();
         t.insert("apple");
-        System.out.println(t.search("apple"));    // true
-        System.out.println(t.search("app"));      // false
-        System.out.println(t.startsWith("app"));  // true
+        Check.eq("true", () -> t.search("apple"));
+        Check.eq("false", () -> t.search("app"));
+        Check.eq("true", () -> t.startsWith("app"));
         t.insert("app");
-        System.out.println(t.search("app"));      // true
+        Check.eq("true", () -> t.search("app"));
+        Check.summary();
     }
 }

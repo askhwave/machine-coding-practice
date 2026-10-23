@@ -40,7 +40,9 @@ public class LC0637_AverageOfLevelsInBinaryTree {
 
     public static void main(String[] args) {
         LC0637_AverageOfLevelsInBinaryTree sol = new LC0637_AverageOfLevelsInBinaryTree();
-        System.out.println(sol.averageOfLevels(TreeNode.of(3,9,20,null,null,15,7))); // [3.0, 14.5, 11.0]
-        System.out.println(sol.averageOfLevels(TreeNode.of(3,9,20,15,7)));           // [3.0, 14.5, 11.0]
+        Check.start("LC0637_AverageOfLevelsInBinaryTree");
+        Check.eq("[3.0, 14.5, 11.0]", () -> sol.averageOfLevels(TreeNode.of(3,9,20,null,null,15,7)));
+        Check.eq("[3.0, 14.5, 11.0]", () -> sol.averageOfLevels(TreeNode.of(3,9,20,15,7)));
+        Check.summary();
     }
 }

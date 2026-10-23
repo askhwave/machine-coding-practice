@@ -43,7 +43,9 @@ public class LC0207_CourseSchedule {
 
     public static void main(String[] args) {
         LC0207_CourseSchedule sol = new LC0207_CourseSchedule();
-        System.out.println(sol.canFinish(2, new int[][]{{1,0}}));         // true
-        System.out.println(sol.canFinish(2, new int[][]{{1,0},{0,1}}));    // false
+        Check.start("LC0207_CourseSchedule");
+        Check.eq("true", () -> sol.canFinish(2, new int[][]{{1,0}}));
+        Check.eq("false", () -> sol.canFinish(2, new int[][]{{1,0},{0,1}}));
+        Check.summary();
     }
 }

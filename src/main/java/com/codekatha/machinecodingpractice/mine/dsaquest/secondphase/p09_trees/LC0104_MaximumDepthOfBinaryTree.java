@@ -39,8 +39,10 @@ public class LC0104_MaximumDepthOfBinaryTree {
 
     public static void main(String[] args) {
         LC0104_MaximumDepthOfBinaryTree sol = new LC0104_MaximumDepthOfBinaryTree();
-        System.out.println(sol.maxDepth(TreeNode.of(3,9,20,null,null,15,7))); // 3
-        System.out.println(sol.maxDepth(TreeNode.of(1,null,2)));              // 2
-        System.out.println(sol.maxDepth(null));                               // 0
+        Check.start("LC0104_MaximumDepthOfBinaryTree");
+        Check.eq("3", () -> sol.maxDepth(TreeNode.of(3,9,20,null,null,15,7)));
+        Check.eq("2", () -> sol.maxDepth(TreeNode.of(1,null,2)));
+        Check.eq("0", () -> sol.maxDepth(null));
+        Check.summary();
     }
 }

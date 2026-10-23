@@ -40,7 +40,9 @@ public class LC0202_HappyNumber {
 
     public static void main(String[] args) {
         LC0202_HappyNumber sol = new LC0202_HappyNumber();
-        System.out.println(sol.isHappy(19)); // true
-        System.out.println(sol.isHappy(2));  // false
+        Check.start("LC0202_HappyNumber");
+        Check.eq("true", () -> sol.isHappy(19));
+        Check.eq("false", () -> sol.isHappy(2));
+        Check.summary();
     }
 }

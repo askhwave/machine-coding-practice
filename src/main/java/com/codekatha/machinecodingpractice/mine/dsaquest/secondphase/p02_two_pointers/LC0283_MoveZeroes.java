@@ -39,8 +39,10 @@ public class LC0283_MoveZeroes {
 
     public static void main(String[] args) {
         LC0283_MoveZeroes sol = new LC0283_MoveZeroes();
+        Check.start("LC0283_MoveZeroes");
         int[] a = {0,1,0,3,12};
         sol.moveZeroes(a);
-        System.out.println(Arrays.toString(a)); // [1, 3, 12, 0, 0]
+        Check.eq("[1, 3, 12, 0, 0]", () -> Arrays.toString(a));
+        Check.summary();
     }
 }

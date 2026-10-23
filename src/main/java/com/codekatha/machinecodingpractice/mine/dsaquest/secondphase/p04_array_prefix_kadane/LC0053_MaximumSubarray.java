@@ -44,9 +44,11 @@ public class LC0053_MaximumSubarray {
 
     public static void main(String[] args) {
         LC0053_MaximumSubarray sol = new LC0053_MaximumSubarray();
-        System.out.println(sol.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4})); // 6
-        System.out.println(sol.maxSubArray(new int[]{1}));                     // 1
-        System.out.println(sol.maxSubArray(new int[]{5,4,-1,7,8}));            // 23
-        System.out.println(sol.maxSubArray(new int[]{-3,-1,-2}));              // -1
+        Check.start("LC0053_MaximumSubarray");
+        Check.eq("6", () -> sol.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        Check.eq("1", () -> sol.maxSubArray(new int[]{1}));
+        Check.eq("23", () -> sol.maxSubArray(new int[]{5,4,-1,7,8}));
+        Check.eq("-1", () -> sol.maxSubArray(new int[]{-3,-1,-2}));
+        Check.summary();
     }
 }

@@ -45,10 +45,12 @@ public class LC0231_PowerOfTwo {
 
     public static void main(String[] args) {
         LC0231_PowerOfTwo sol = new LC0231_PowerOfTwo();
-        System.out.println(sol.isPowerOfTwo(1));    // true
-        System.out.println(sol.isPowerOfTwo(16));   // true
-        System.out.println(sol.isPowerOfTwo(3));    // false
-        System.out.println(sol.isPowerOfTwo(0));    // false
-        System.out.println(sol.isPowerOfTwo(-16));  // false
+        Check.start("LC0231_PowerOfTwo");
+        Check.eq("true", () -> sol.isPowerOfTwo(1));
+        Check.eq("true", () -> sol.isPowerOfTwo(16));
+        Check.eq("false", () -> sol.isPowerOfTwo(3));
+        Check.eq("false", () -> sol.isPowerOfTwo(0));
+        Check.eq("false", () -> sol.isPowerOfTwo(-16));
+        Check.summary();
     }
 }

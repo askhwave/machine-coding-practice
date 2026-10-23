@@ -60,10 +60,12 @@ public class LC0008_StringToIntegerAtoi {
 
     public static void main(String[] args) {
         LC0008_StringToIntegerAtoi sol = new LC0008_StringToIntegerAtoi();
-        System.out.println(sol.myAtoi("42"));             // 42
-        System.out.println(sol.myAtoi("   -042"));        // -42
-        System.out.println(sol.myAtoi("1337c0d3"));       // 1337
-        System.out.println(sol.myAtoi("words and 987"));   // 0
-        System.out.println(sol.myAtoi("-91283472332"));    // -2147483648
+        Check.start("LC0008_StringToIntegerAtoi");
+        Check.eq("42", () -> sol.myAtoi("42"));
+        Check.eq("-42", () -> sol.myAtoi("   -042"));
+        Check.eq("1337", () -> sol.myAtoi("1337c0d3"));
+        Check.eq("0", () -> sol.myAtoi("words and 987"));
+        Check.eq("-2147483648", () -> sol.myAtoi("-91283472332"));
+        Check.summary();
     }
 }

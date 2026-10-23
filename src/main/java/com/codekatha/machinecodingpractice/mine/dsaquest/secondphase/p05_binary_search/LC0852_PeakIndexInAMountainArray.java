@@ -45,8 +45,10 @@ public class LC0852_PeakIndexInAMountainArray {
 
     public static void main(String[] args) {
         LC0852_PeakIndexInAMountainArray sol = new LC0852_PeakIndexInAMountainArray();
-        System.out.println(sol.peakIndexInMountainArray(new int[]{0,1,0}));    // 1
-        System.out.println(sol.peakIndexInMountainArray(new int[]{0,2,1,0}));  // 1
-        System.out.println(sol.peakIndexInMountainArray(new int[]{0,10,5,2})); // 1
+        Check.start("LC0852_PeakIndexInAMountainArray");
+        Check.eq("1", () -> sol.peakIndexInMountainArray(new int[]{0,1,0}));
+        Check.eq("1", () -> sol.peakIndexInMountainArray(new int[]{0,2,1,0}));
+        Check.eq("1", () -> sol.peakIndexInMountainArray(new int[]{0,10,5,2}));
+        Check.summary();
     }
 }

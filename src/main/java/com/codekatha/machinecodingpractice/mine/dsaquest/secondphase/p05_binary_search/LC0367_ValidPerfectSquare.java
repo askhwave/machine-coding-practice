@@ -37,8 +37,10 @@ public class LC0367_ValidPerfectSquare {
 
     public static void main(String[] args) {
         LC0367_ValidPerfectSquare sol = new LC0367_ValidPerfectSquare();
-        System.out.println(sol.isPerfectSquare(16));         // true
-        System.out.println(sol.isPerfectSquare(14));         // false
-        System.out.println(sol.isPerfectSquare(2147395600));  // true
+        Check.start("LC0367_ValidPerfectSquare");
+        Check.eq("true", () -> sol.isPerfectSquare(16));
+        Check.eq("false", () -> sol.isPerfectSquare(14));
+        Check.eq("true", () -> sol.isPerfectSquare(2147395600));
+        Check.summary();
     }
 }

@@ -41,7 +41,9 @@ public class LC0162_FindPeakElement {
 
     public static void main(String[] args) {
         LC0162_FindPeakElement sol = new LC0162_FindPeakElement();
-        System.out.println(sol.findPeakElement(new int[]{1,2,3,1}));         // 2
-        System.out.println(sol.findPeakElement(new int[]{1,2,1,3,5,6,4}));   // 1 or 5
+        Check.start("LC0162_FindPeakElement");
+        Check.eq("2", () -> sol.findPeakElement(new int[]{1,2,3,1}));
+        Check.eq("1 or 5", () -> sol.findPeakElement(new int[]{1,2,1,3,5,6,4}));
+        Check.summary();
     }
 }

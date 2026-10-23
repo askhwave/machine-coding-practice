@@ -44,8 +44,10 @@ public class LC0128_LongestConsecutiveSequence {
 
     public static void main(String[] args) {
         LC0128_LongestConsecutiveSequence sol = new LC0128_LongestConsecutiveSequence();
-        System.out.println(sol.longestConsecutive(new int[]{100,4,200,1,3,2}));         // 4
-        System.out.println(sol.longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));     // 9
-        System.out.println(sol.longestConsecutive(new int[]{1,0,1,2}));                 // 3
+        Check.start("LC0128_LongestConsecutiveSequence");
+        Check.eq("4", () -> sol.longestConsecutive(new int[]{100,4,200,1,3,2}));
+        Check.eq("9", () -> sol.longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));
+        Check.eq("3", () -> sol.longestConsecutive(new int[]{1,0,1,2}));
+        Check.summary();
     }
 }

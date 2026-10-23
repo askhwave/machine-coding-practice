@@ -48,8 +48,10 @@ public class LC0057_InsertInterval {
 
     public static void main(String[] args) {
         LC0057_InsertInterval sol = new LC0057_InsertInterval();
-        System.out.println(Arrays.deepToString(sol.insert(new int[][]{{1,3},{6,9}}, new int[]{2,5})));                              // [[1, 5], [6, 9]]
-        System.out.println(Arrays.deepToString(sol.insert(new int[][]{{1,2},{3,5},{6,7},{8,10},{12,16}}, new int[]{4,8})));      // [[1, 2], [3, 10], [12, 16]]
-        System.out.println(Arrays.deepToString(sol.insert(new int[][]{}, new int[]{5,7})));                                      // [[5, 7]]
+        Check.start("LC0057_InsertInterval");
+        Check.eq("[[1, 5], [6, 9]]", () -> Arrays.deepToString(sol.insert(new int[][]{{1,3},{6,9}}, new int[]{2,5})));
+        Check.eq("[[1, 2], [3, 10], [12, 16]]", () -> Arrays.deepToString(sol.insert(new int[][]{{1,2},{3,5},{6,7},{8,10},{12,16}}, new int[]{4,8})));
+        Check.eq("[[5, 7]]", () -> Arrays.deepToString(sol.insert(new int[][]{}, new int[]{5,7})));
+        Check.summary();
     }
 }

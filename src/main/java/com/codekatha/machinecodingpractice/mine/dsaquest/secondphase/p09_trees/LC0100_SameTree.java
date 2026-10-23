@@ -45,8 +45,10 @@ public class LC0100_SameTree {
 
     public static void main(String[] args) {
         LC0100_SameTree sol = new LC0100_SameTree();
-        System.out.println(sol.isSameTree(TreeNode.of(1,2,3), TreeNode.of(1,2,3)));          // true
-        System.out.println(sol.isSameTree(TreeNode.of(1,2), TreeNode.of(1,null,2)));         // false
-        System.out.println(sol.isSameTree(TreeNode.of(1,2,1), TreeNode.of(1,1,2)));          // false
+        Check.start("LC0100_SameTree");
+        Check.eq("true", () -> sol.isSameTree(TreeNode.of(1,2,3), TreeNode.of(1,2,3)));
+        Check.eq("false", () -> sol.isSameTree(TreeNode.of(1,2), TreeNode.of(1,null,2)));
+        Check.eq("false", () -> sol.isSameTree(TreeNode.of(1,2,1), TreeNode.of(1,1,2)));
+        Check.summary();
     }
 }

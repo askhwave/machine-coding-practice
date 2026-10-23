@@ -49,8 +49,10 @@ public class LC0518_CoinChangeII {
 
     public static void main(String[] args) {
         LC0518_CoinChangeII sol = new LC0518_CoinChangeII();
-        System.out.println(sol.change(5, new int[]{1,2,5})); // 4
-        System.out.println(sol.change(3, new int[]{2}));       // 0
-        System.out.println(sol.change(10, new int[]{10}));     // 1
+        Check.start("LC0518_CoinChangeII");
+        Check.eq("4", () -> sol.change(5, new int[]{1,2,5}));
+        Check.eq("0", () -> sol.change(3, new int[]{2}));
+        Check.eq("1", () -> sol.change(10, new int[]{10}));
+        Check.summary();
     }
 }

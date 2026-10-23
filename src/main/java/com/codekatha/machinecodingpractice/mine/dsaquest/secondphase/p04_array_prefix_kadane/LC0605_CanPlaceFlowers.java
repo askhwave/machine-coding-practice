@@ -42,8 +42,10 @@ public class LC0605_CanPlaceFlowers {
 
     public static void main(String[] args) {
         LC0605_CanPlaceFlowers sol = new LC0605_CanPlaceFlowers();
-        System.out.println(sol.canPlaceFlowers(new int[]{1,0,0,0,1}, 1)); // true
-        System.out.println(sol.canPlaceFlowers(new int[]{1,0,0,0,1}, 2)); // false
-        System.out.println(sol.canPlaceFlowers(new int[]{0}, 1));         // true
+        Check.start("LC0605_CanPlaceFlowers");
+        Check.eq("true", () -> sol.canPlaceFlowers(new int[]{1,0,0,0,1}, 1));
+        Check.eq("false", () -> sol.canPlaceFlowers(new int[]{1,0,0,0,1}, 2));
+        Check.eq("true", () -> sol.canPlaceFlowers(new int[]{0}, 1));
+        Check.summary();
     }
 }

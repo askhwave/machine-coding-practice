@@ -38,7 +38,9 @@ public class LC0215_KthLargestElementInAnArray {
 
     public static void main(String[] args) {
         LC0215_KthLargestElementInAnArray sol = new LC0215_KthLargestElementInAnArray();
-        System.out.println(sol.findKthLargest(new int[]{3,2,1,5,6,4}, 2));       // 5
-        System.out.println(sol.findKthLargest(new int[]{3,2,3,1,2,4,5,5,6}, 4));   // 4
+        Check.start("LC0215_KthLargestElementInAnArray");
+        Check.eq("5", () -> sol.findKthLargest(new int[]{3,2,1,5,6,4}, 2));
+        Check.eq("4", () -> sol.findKthLargest(new int[]{3,2,3,1,2,4,5,5,6}, 4));
+        Check.summary();
     }
 }

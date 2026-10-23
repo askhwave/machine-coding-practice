@@ -47,7 +47,9 @@ public class LC1971_FindIfPathExistsInGraph {
 
     public static void main(String[] args) {
         LC1971_FindIfPathExistsInGraph sol = new LC1971_FindIfPathExistsInGraph();
-        System.out.println(sol.validPath(3, new int[][]{{0,1},{1,2},{2,0}}, 0, 2));                          // true
-        System.out.println(sol.validPath(6, new int[][]{{0,1},{0,2},{3,5},{5,4},{4,3}}, 0, 5));              // false
+        Check.start("LC1971_FindIfPathExistsInGraph");
+        Check.eq("true", () -> sol.validPath(3, new int[][]{{0,1},{1,2},{2,0}}, 0, 2));
+        Check.eq("false", () -> sol.validPath(6, new int[][]{{0,1},{0,2},{3,5},{5,4},{4,3}}, 0, 5));
+        Check.summary();
     }
 }

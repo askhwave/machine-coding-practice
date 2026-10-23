@@ -37,7 +37,9 @@ public class LC0005_LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         LC0005_LongestPalindromicSubstring sol = new LC0005_LongestPalindromicSubstring();
-        System.out.println(sol.longestPalindrome("babad")); // bab or aba
-        System.out.println(sol.longestPalindrome("cbbd"));  // bb
+        Check.start("LC0005_LongestPalindromicSubstring");
+        Check.eq("bab or aba", () -> sol.longestPalindrome("babad"));
+        Check.eq("bb", () -> sol.longestPalindrome("cbbd"));
+        Check.summary();
     }
 }

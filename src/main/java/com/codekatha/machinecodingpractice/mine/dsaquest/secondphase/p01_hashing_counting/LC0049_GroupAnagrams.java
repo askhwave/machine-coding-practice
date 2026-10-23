@@ -45,8 +45,10 @@ public class LC0049_GroupAnagrams {
 
     public static void main(String[] args) {
         LC0049_GroupAnagrams sol = new LC0049_GroupAnagrams();
-        System.out.println(sol.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"})); // groups of anagrams
-        System.out.println(sol.groupAnagrams(new String[]{""}));  // [[]]
-        System.out.println(sol.groupAnagrams(new String[]{"a"}));  // [[a]]
+        Check.start("LC0049_GroupAnagrams");
+        Check.sameElements("[[bat], [nat, tan], [ate, eat, tea]]", () -> sol.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        Check.sameElements("[[]]", () -> sol.groupAnagrams(new String[]{""}));
+        Check.sameElements("[[a]]", () -> sol.groupAnagrams(new String[]{"a"}));
+        Check.summary();
     }
 }

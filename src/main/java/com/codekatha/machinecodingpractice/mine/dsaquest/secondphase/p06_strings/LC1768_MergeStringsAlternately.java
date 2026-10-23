@@ -44,8 +44,10 @@ public class LC1768_MergeStringsAlternately {
 
     public static void main(String[] args) {
         LC1768_MergeStringsAlternately sol = new LC1768_MergeStringsAlternately();
-        System.out.println(sol.mergeAlternately("abc", "pqr"));   // apbqcr
-        System.out.println(sol.mergeAlternately("ab", "pqrs"));   // apbqrs
-        System.out.println(sol.mergeAlternately("abcd", "pq"));   // apbqcd
+        Check.start("LC1768_MergeStringsAlternately");
+        Check.eq("apbqcr", () -> sol.mergeAlternately("abc", "pqr"));
+        Check.eq("apbqrs", () -> sol.mergeAlternately("ab", "pqrs"));
+        Check.eq("apbqcd", () -> sol.mergeAlternately("abcd", "pq"));
+        Check.summary();
     }
 }

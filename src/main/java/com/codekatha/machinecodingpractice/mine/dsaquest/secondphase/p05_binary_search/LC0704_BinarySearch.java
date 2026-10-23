@@ -40,7 +40,9 @@ public class LC0704_BinarySearch {
 
     public static void main(String[] args) {
         LC0704_BinarySearch sol = new LC0704_BinarySearch();
-        System.out.println(sol.search(new int[]{-1,0,3,5,9,12}, 9)); // 4
-        System.out.println(sol.search(new int[]{-1,0,3,5,9,12}, 2)); // -1
+        Check.start("LC0704_BinarySearch");
+        Check.eq("4", () -> sol.search(new int[]{-1,0,3,5,9,12}, 9));
+        Check.eq("-1", () -> sol.search(new int[]{-1,0,3,5,9,12}, 2));
+        Check.summary();
     }
 }

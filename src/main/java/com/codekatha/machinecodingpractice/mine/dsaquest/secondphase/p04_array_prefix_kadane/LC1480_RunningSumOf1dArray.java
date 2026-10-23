@@ -44,7 +44,9 @@ public class LC1480_RunningSumOf1dArray {
 
     public static void main(String[] args) {
         LC1480_RunningSumOf1dArray sol = new LC1480_RunningSumOf1dArray();
-        System.out.println(Arrays.toString(sol.runningSum(new int[]{1,2,3,4})));   // [1, 3, 6, 10]
-        System.out.println(Arrays.toString(sol.runningSum(new int[]{3,1,2,10,1}))); // [3, 4, 6, 16, 17]
+        Check.start("LC1480_RunningSumOf1dArray");
+        Check.eq("[1, 3, 6, 10]", () -> Arrays.toString(sol.runningSum(new int[]{1,2,3,4})));
+        Check.eq("[3, 4, 6, 16, 17]", () -> Arrays.toString(sol.runningSum(new int[]{3,1,2,10,1})));
+        Check.summary();
     }
 }

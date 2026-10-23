@@ -47,8 +47,10 @@ public class LC0435_NonOverlappingIntervals {
 
     public static void main(String[] args) {
         LC0435_NonOverlappingIntervals sol = new LC0435_NonOverlappingIntervals();
-        System.out.println(sol.eraseOverlapIntervals(new int[][]{{1,2},{2,3},{3,4},{1,3}})); // 1
-        System.out.println(sol.eraseOverlapIntervals(new int[][]{{1,2},{1,2},{1,2}}));         // 2
-        System.out.println(sol.eraseOverlapIntervals(new int[][]{{1,2},{2,3}}));               // 0
+        Check.start("LC0435_NonOverlappingIntervals");
+        Check.eq("1", () -> sol.eraseOverlapIntervals(new int[][]{{1,2},{2,3},{3,4},{1,3}}));
+        Check.eq("2", () -> sol.eraseOverlapIntervals(new int[][]{{1,2},{1,2},{1,2}}));
+        Check.eq("0", () -> sol.eraseOverlapIntervals(new int[][]{{1,2},{2,3}}));
+        Check.summary();
     }
 }

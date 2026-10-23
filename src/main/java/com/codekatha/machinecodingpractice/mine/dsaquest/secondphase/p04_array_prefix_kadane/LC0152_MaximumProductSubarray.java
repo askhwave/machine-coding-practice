@@ -40,8 +40,10 @@ public class LC0152_MaximumProductSubarray {
 
     public static void main(String[] args) {
         LC0152_MaximumProductSubarray sol = new LC0152_MaximumProductSubarray();
-        System.out.println(sol.maxProduct(new int[]{2,3,-2,4}));  // 6
-        System.out.println(sol.maxProduct(new int[]{-2,0,-1}));   // 0
-        System.out.println(sol.maxProduct(new int[]{-2,3,-4}));   // 24
+        Check.start("LC0152_MaximumProductSubarray");
+        Check.eq("6", () -> sol.maxProduct(new int[]{2,3,-2,4}));
+        Check.eq("0", () -> sol.maxProduct(new int[]{-2,0,-1}));
+        Check.eq("24", () -> sol.maxProduct(new int[]{-2,3,-4}));
+        Check.summary();
     }
 }

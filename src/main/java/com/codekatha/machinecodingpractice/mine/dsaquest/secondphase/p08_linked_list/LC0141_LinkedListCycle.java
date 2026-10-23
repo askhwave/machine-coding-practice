@@ -49,9 +49,11 @@ public class LC0141_LinkedListCycle {
 
     public static void main(String[] args) {
         LC0141_LinkedListCycle sol = new LC0141_LinkedListCycle();
+        Check.start("LC0141_LinkedListCycle");
         ListNode a = ListNode.of(3,2,0,-4);
         a.next.next.next.next = a.next; // tail -> node index 1
-        System.out.println(sol.hasCycle(a)); // true
-        System.out.println(sol.hasCycle(ListNode.of(1))); // false
+        Check.eq("true", () -> sol.hasCycle(a));
+        Check.eq("false", () -> sol.hasCycle(ListNode.of(1)));
+        Check.summary();
     }
 }

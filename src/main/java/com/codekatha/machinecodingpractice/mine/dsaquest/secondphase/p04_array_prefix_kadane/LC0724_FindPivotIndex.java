@@ -47,8 +47,10 @@ public class LC0724_FindPivotIndex {
 
     public static void main(String[] args) {
         LC0724_FindPivotIndex sol = new LC0724_FindPivotIndex();
-        System.out.println(sol.pivotIndex(new int[]{1,7,3,6,5,6})); // 3
-        System.out.println(sol.pivotIndex(new int[]{1,2,3}));       // -1
-        System.out.println(sol.pivotIndex(new int[]{2,1,-1}));      // 0
+        Check.start("LC0724_FindPivotIndex");
+        Check.eq("3", () -> sol.pivotIndex(new int[]{1,7,3,6,5,6}));
+        Check.eq("-1", () -> sol.pivotIndex(new int[]{1,2,3}));
+        Check.eq("0", () -> sol.pivotIndex(new int[]{2,1,-1}));
+        Check.summary();
     }
 }

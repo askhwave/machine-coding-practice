@@ -48,11 +48,13 @@ public class LC0278_FirstBadVersion {
 
     public static void main(String[] args) {
         LC0278_FirstBadVersion sol = new LC0278_FirstBadVersion();
+        Check.start("LC0278_FirstBadVersion");
         sol.bad = 4;
-        System.out.println(sol.firstBadVersion(5)); // 4
+        Check.eq("4", () -> sol.firstBadVersion(5));
         sol.bad = 1;
-        System.out.println(sol.firstBadVersion(1)); // 1
+        Check.eq("1", () -> sol.firstBadVersion(1));
         sol.bad = 1702766719;
-        System.out.println(sol.firstBadVersion(2126753390)); // 1702766719
+        Check.eq("1702766719", () -> sol.firstBadVersion(2126753390));
+        Check.summary();
     }
 }

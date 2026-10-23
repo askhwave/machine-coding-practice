@@ -41,8 +41,10 @@ public class LC0026_RemoveDuplicatesFromSortedArray {
 
     public static void main(String[] args) {
         LC0026_RemoveDuplicatesFromSortedArray sol = new LC0026_RemoveDuplicatesFromSortedArray();
+        Check.start("LC0026_RemoveDuplicatesFromSortedArray");
         int[] a = {0,0,1,1,1,2,2,3,3,4};
         int k = sol.removeDuplicates(a);
-        System.out.println(k + " " + Arrays.toString(Arrays.copyOf(a, k))); // 5 [0, 1, 2, 3, 4]
+        Check.eq("5 [0, 1, 2, 3, 4]", () -> k + " " + Arrays.toString(Arrays.copyOf(a, k)));
+        Check.summary();
     }
 }

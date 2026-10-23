@@ -43,9 +43,11 @@ public class LC0007_ReverseInteger {
 
     public static void main(String[] args) {
         LC0007_ReverseInteger sol = new LC0007_ReverseInteger();
-        System.out.println(sol.reverse(123));          // 321
-        System.out.println(sol.reverse(-123));         // -321
-        System.out.println(sol.reverse(120));          // 21
-        System.out.println(sol.reverse(1534236469));   // 0 (overflow)
+        Check.start("LC0007_ReverseInteger");
+        Check.eq("321", () -> sol.reverse(123));
+        Check.eq("-321", () -> sol.reverse(-123));
+        Check.eq("21", () -> sol.reverse(120));
+        Check.eq("0 (overflow)", () -> sol.reverse(1534236469));
+        Check.summary();
     }
 }

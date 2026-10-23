@@ -59,8 +59,11 @@ public class LC0068_TextJustification {
 
     public static void main(String[] args) {
         LC0068_TextJustification sol = new LC0068_TextJustification();
-        for (String line : sol.fullJustify(new String[]{"This","is","an","example","of","text","justification."}, 16))
-            System.out.println("|" + line + "|");
-        // |This    is    an|  |example  of text|  |justification.  |
+        Check.start("LC0068_TextJustification");
+        Check.eq(List.of("This    is    an", "example  of text", "justification.  "),
+                 () -> sol.fullJustify(new String[]{"This","is","an","example","of","text","justification."}, 16));
+        Check.eq(List.of("What   must   be", "acknowledgment  ", "shall be        "),
+                 () -> sol.fullJustify(new String[]{"What","must","be","acknowledgment","shall","be"}, 16));
+        Check.summary();
     }
 }

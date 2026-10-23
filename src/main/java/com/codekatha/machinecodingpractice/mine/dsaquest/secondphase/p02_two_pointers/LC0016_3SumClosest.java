@@ -40,7 +40,9 @@ public class LC0016_3SumClosest {
 
     public static void main(String[] args) {
         LC0016_3SumClosest sol = new LC0016_3SumClosest();
-        System.out.println(sol.threeSumClosest(new int[]{-1,2,1,-4}, 1)); // 2
-        System.out.println(sol.threeSumClosest(new int[]{0,0,0}, 1));     // 0
+        Check.start("LC0016_3SumClosest");
+        Check.eq("2", () -> sol.threeSumClosest(new int[]{-1,2,1,-4}, 1));
+        Check.eq("0", () -> sol.threeSumClosest(new int[]{0,0,0}, 1));
+        Check.summary();
     }
 }

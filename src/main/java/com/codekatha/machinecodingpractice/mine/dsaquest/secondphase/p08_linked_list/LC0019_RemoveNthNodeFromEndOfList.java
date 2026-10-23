@@ -47,9 +47,11 @@ public class LC0019_RemoveNthNodeFromEndOfList {
 
     public static void main(String[] args) {
         LC0019_RemoveNthNodeFromEndOfList sol = new LC0019_RemoveNthNodeFromEndOfList();
-        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2,3,4,5), 2)); // 1->2->3->5
-        System.out.println(sol.removeNthFromEnd(ListNode.of(1), 1));         // null
-        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2), 1));       // 1
-        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2), 2));       // 2
+        Check.start("LC0019_RemoveNthNodeFromEndOfList");
+        Check.eq("1->2->3->5", () -> sol.removeNthFromEnd(ListNode.of(1,2,3,4,5), 2));
+        Check.eq("null", () -> sol.removeNthFromEnd(ListNode.of(1), 1));
+        Check.eq("1", () -> sol.removeNthFromEnd(ListNode.of(1,2), 1));
+        Check.eq("2", () -> sol.removeNthFromEnd(ListNode.of(1,2), 2));
+        Check.summary();
     }
 }

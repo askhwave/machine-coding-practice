@@ -49,11 +49,11 @@ public class LC0443_StringCompression {
 
     public static void main(String[] args) {
         LC0443_StringCompression sol = new LC0443_StringCompression();
+        Check.start("LC0443_StringCompression");
         char[] a = {'a','a','b','b','c','c','c'};
-        int k = sol.compress(a);
-        System.out.println(k + " " + new String(a, 0, k)); // 6 a2b2c3
         char[] b = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
-        k = sol.compress(b);
-        System.out.println(k + " " + new String(b, 0, k)); // 4 ab12
+        Check.eq("6 a2b2c3", () -> { int k = sol.compress(a); return k + " " + new String(a, 0, k); });
+        Check.eq("4 ab12", () -> { int k = sol.compress(b); return k + " " + new String(b, 0, k); });
+        Check.summary();
     }
 }

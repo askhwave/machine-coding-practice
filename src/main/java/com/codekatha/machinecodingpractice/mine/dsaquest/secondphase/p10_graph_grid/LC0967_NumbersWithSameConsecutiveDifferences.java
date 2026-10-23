@@ -41,8 +41,10 @@ public class LC0967_NumbersWithSameConsecutiveDifferences {
 
     public static void main(String[] args) {
         LC0967_NumbersWithSameConsecutiveDifferences sol = new LC0967_NumbersWithSameConsecutiveDifferences();
-        System.out.println(Arrays.toString(sol.numsSameConsecDiff(3, 7))); // [181, 292, 707, 818, 929]
-        System.out.println(Arrays.toString(sol.numsSameConsecDiff(2, 1))); // [10, 12, 21, ..., 98]
-        System.out.println(Arrays.toString(sol.numsSameConsecDiff(2, 0))); // [11, 22, ..., 99]
+        Check.start("LC0967_NumbersWithSameConsecutiveDifferences");
+        Check.sameElements("[181, 292, 707, 818, 929]", () -> sol.numsSameConsecDiff(3, 7));
+        Check.sameElements("[10, 12, 21, 23, 32, 34, 43, 45, 54, 56, 65, 67, 76, 78, 87, 89, 98]", () -> sol.numsSameConsecDiff(2, 1));
+        Check.sameElements("[11, 22, 33, 44, 55, 66, 77, 88, 99]", () -> sol.numsSameConsecDiff(2, 0));
+        Check.summary();
     }
 }

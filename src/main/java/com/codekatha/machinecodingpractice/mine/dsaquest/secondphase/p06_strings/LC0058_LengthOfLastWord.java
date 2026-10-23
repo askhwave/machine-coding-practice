@@ -44,8 +44,10 @@ public class LC0058_LengthOfLastWord {
 
     public static void main(String[] args) {
         LC0058_LengthOfLastWord sol = new LC0058_LengthOfLastWord();
-        System.out.println(sol.lengthOfLastWord("Hello World"));                 // 5
-        System.out.println(sol.lengthOfLastWord("   fly me   to   the moon  ")); // 4
-        System.out.println(sol.lengthOfLastWord("luffy is still joyboy"));       // 6
+        Check.start("LC0058_LengthOfLastWord");
+        Check.eq("5", () -> sol.lengthOfLastWord("Hello World"));
+        Check.eq("4", () -> sol.lengthOfLastWord("   fly me   to   the moon  "));
+        Check.eq("6", () -> sol.lengthOfLastWord("luffy is still joyboy"));
+        Check.summary();
     }
 }

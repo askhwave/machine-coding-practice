@@ -42,8 +42,10 @@ public class LC0080_RemoveDuplicatesFromSortedArrayII {
 
     public static void main(String[] args) {
         LC0080_RemoveDuplicatesFromSortedArrayII sol = new LC0080_RemoveDuplicatesFromSortedArrayII();
+        Check.start("LC0080_RemoveDuplicatesFromSortedArrayII");
         int[] a = {0,0,1,1,1,1,2,3,3};
         int k = sol.removeDuplicates(a);
-        System.out.println(k + " " + Arrays.toString(Arrays.copyOf(a, k))); // 7 [0, 0, 1, 1, 2, 3, 3]
+        Check.eq("7 [0, 0, 1, 1, 2, 3, 3]", () -> k + " " + Arrays.toString(Arrays.copyOf(a, k)));
+        Check.summary();
     }
 }

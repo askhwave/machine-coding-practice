@@ -47,7 +47,9 @@ public class LC0103_BinaryTreeZigzagLevelOrderTraversal {
 
     public static void main(String[] args) {
         LC0103_BinaryTreeZigzagLevelOrderTraversal sol = new LC0103_BinaryTreeZigzagLevelOrderTraversal();
-        System.out.println(sol.zigzagLevelOrder(TreeNode.of(3,9,20,null,null,15,7))); // [[3], [20, 9], [15, 7]]
-        System.out.println(sol.zigzagLevelOrder(TreeNode.of(1,2,3,4,null,null,5)));    // [[1], [3, 2], [4, 5]]
+        Check.start("LC0103_BinaryTreeZigzagLevelOrderTraversal");
+        Check.eq("[[3], [20, 9], [15, 7]]", () -> sol.zigzagLevelOrder(TreeNode.of(3,9,20,null,null,15,7)));
+        Check.eq("[[1], [3, 2], [4, 5]]", () -> sol.zigzagLevelOrder(TreeNode.of(1,2,3,4,null,null,5)));
+        Check.summary();
     }
 }

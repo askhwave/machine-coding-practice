@@ -50,8 +50,10 @@ public class LC3644_MaximumKToSortAPermutation {
 
     public static void main(String[] args) {
         LC3644_MaximumKToSortAPermutation sol = new LC3644_MaximumKToSortAPermutation();
-        System.out.println(sol.sortPermutation(new int[]{0,3,2,1})); // 1
-        System.out.println(sol.sortPermutation(new int[]{0,1,3,2})); // 2
-        System.out.println(sol.sortPermutation(new int[]{3,2,1,0})); // 0
+        Check.start("LC3644_MaximumKToSortAPermutation");
+        Check.eq("1", () -> sol.sortPermutation(new int[]{0,3,2,1}));
+        Check.eq("2", () -> sol.sortPermutation(new int[]{0,1,3,2}));
+        Check.eq("0", () -> sol.sortPermutation(new int[]{3,2,1,0}));
+        Check.summary();
     }
 }

@@ -48,8 +48,10 @@ public class LC0139_WordBreak {
 
     public static void main(String[] args) {
         LC0139_WordBreak sol = new LC0139_WordBreak();
-        System.out.println(sol.wordBreak("leetcode", List.of("leet","code")));                          // true
-        System.out.println(sol.wordBreak("applepenapple", List.of("apple","pen")));                      // true
-        System.out.println(sol.wordBreak("catsandog", List.of("cats","dog","sand","and","cat")));     // false
+        Check.start("LC0139_WordBreak");
+        Check.eq("true", () -> sol.wordBreak("leetcode", List.of("leet","code")));
+        Check.eq("true", () -> sol.wordBreak("applepenapple", List.of("apple","pen")));
+        Check.eq("false", () -> sol.wordBreak("catsandog", List.of("cats","dog","sand","and","cat")));
+        Check.summary();
     }
 }

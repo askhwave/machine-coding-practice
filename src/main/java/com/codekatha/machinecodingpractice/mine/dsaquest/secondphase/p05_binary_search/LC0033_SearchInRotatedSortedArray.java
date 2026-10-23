@@ -50,9 +50,11 @@ public class LC0033_SearchInRotatedSortedArray {
 
     public static void main(String[] args) {
         LC0033_SearchInRotatedSortedArray sol = new LC0033_SearchInRotatedSortedArray();
-        System.out.println(sol.search(new int[]{4,5,6,7,0,1,2}, 0)); // 4
-        System.out.println(sol.search(new int[]{4,5,6,7,0,1,2}, 3)); // -1
-        System.out.println(sol.search(new int[]{1}, 0));             // -1
-        System.out.println(sol.search(new int[]{3,1}, 1));            // 1
+        Check.start("LC0033_SearchInRotatedSortedArray");
+        Check.eq("4", () -> sol.search(new int[]{4,5,6,7,0,1,2}, 0));
+        Check.eq("-1", () -> sol.search(new int[]{4,5,6,7,0,1,2}, 3));
+        Check.eq("-1", () -> sol.search(new int[]{1}, 0));
+        Check.eq("1", () -> sol.search(new int[]{3,1}, 1));
+        Check.summary();
     }
 }

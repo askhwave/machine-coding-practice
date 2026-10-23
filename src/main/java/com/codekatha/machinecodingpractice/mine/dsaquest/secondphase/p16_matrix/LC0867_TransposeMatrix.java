@@ -41,7 +41,9 @@ public class LC0867_TransposeMatrix {
 
     public static void main(String[] args) {
         LC0867_TransposeMatrix sol = new LC0867_TransposeMatrix();
-        System.out.println(Arrays.deepToString(sol.transpose(new int[][]{{1,2,3},{4,5,6},{7,8,9}}))); // [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
-        System.out.println(Arrays.deepToString(sol.transpose(new int[][]{{1,2,3},{4,5,6}})));         // [[1, 4], [2, 5], [3, 6]]
+        Check.start("LC0867_TransposeMatrix");
+        Check.eq("[[1, 4, 7], [2, 5, 8], [3, 6, 9]]", () -> Arrays.deepToString(sol.transpose(new int[][]{{1,2,3},{4,5,6},{7,8,9}})));
+        Check.eq("[[1, 4], [2, 5], [3, 6]]", () -> Arrays.deepToString(sol.transpose(new int[][]{{1,2,3},{4,5,6}})));
+        Check.summary();
     }
 }

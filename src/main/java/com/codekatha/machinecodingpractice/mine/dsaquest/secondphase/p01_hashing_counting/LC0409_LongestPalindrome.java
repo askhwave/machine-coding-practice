@@ -39,7 +39,9 @@ public class LC0409_LongestPalindrome {
 
     public static void main(String[] args) {
         LC0409_LongestPalindrome sol = new LC0409_LongestPalindrome();
-        System.out.println(sol.longestPalindrome("abccccdd")); // 7
-        System.out.println(sol.longestPalindrome("a"));        // 1
+        Check.start("LC0409_LongestPalindrome");
+        Check.eq("7", () -> sol.longestPalindrome("abccccdd"));
+        Check.eq("1", () -> sol.longestPalindrome("a"));
+        Check.summary();
     }
 }

@@ -40,7 +40,9 @@ public class LC0424_LongestRepeatingCharacterReplacement {
 
     public static void main(String[] args) {
         LC0424_LongestRepeatingCharacterReplacement sol = new LC0424_LongestRepeatingCharacterReplacement();
-        System.out.println(sol.characterReplacement("ABAB", 2));     // 4
-        System.out.println(sol.characterReplacement("AABABBA", 1));  // 4
+        Check.start("LC0424_LongestRepeatingCharacterReplacement");
+        Check.eq("4", () -> sol.characterReplacement("ABAB", 2));
+        Check.eq("4", () -> sol.characterReplacement("AABABBA", 1));
+        Check.summary();
     }
 }

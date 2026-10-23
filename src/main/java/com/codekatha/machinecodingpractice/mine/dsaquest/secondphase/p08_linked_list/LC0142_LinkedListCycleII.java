@@ -48,9 +48,11 @@ public class LC0142_LinkedListCycleII {
 
     public static void main(String[] args) {
         LC0142_LinkedListCycleII sol = new LC0142_LinkedListCycleII();
+        Check.start("LC0142_LinkedListCycleII");
         ListNode a = ListNode.of(3,2,0,-4);
         a.next.next.next.next = a.next; // tail -> node index 1 (val 2)
         ListNode start = sol.detectCycle(a);
-        System.out.println(start == null ? "no cycle" : "cycle starts at val " + start.val); // 2
+        Check.eq("cycle starts at val 2", () -> start == null ? "no cycle" : "cycle starts at val " + start.val);
+        Check.summary();
     }
 }

@@ -42,7 +42,9 @@ public class LC0198_HouseRobber {
 
     public static void main(String[] args) {
         LC0198_HouseRobber sol = new LC0198_HouseRobber();
-        System.out.println(sol.rob(new int[]{1,2,3,1}));     // 4
-        System.out.println(sol.rob(new int[]{2,7,9,3,1}));   // 12
+        Check.start("LC0198_HouseRobber");
+        Check.eq("4", () -> sol.rob(new int[]{1,2,3,1}));
+        Check.eq("12", () -> sol.rob(new int[]{2,7,9,3,1}));
+        Check.summary();
     }
 }

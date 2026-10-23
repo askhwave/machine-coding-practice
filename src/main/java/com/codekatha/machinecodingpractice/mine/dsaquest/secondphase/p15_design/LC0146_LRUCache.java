@@ -48,14 +48,16 @@ public class LC0146_LRUCache {
 
     public static void main(String[] args) {
         LC0146_LRUCache sol = new LC0146_LRUCache();
+        Check.start("LC0146_LRUCache");
         LRUCache c = new LRUCache(2);
         c.put(1, 1); c.put(2, 2);
-        System.out.println(c.get(1));  // 1
+        Check.eq("1", () -> c.get(1));
         c.put(3, 3);                    // evicts key 2
-        System.out.println(c.get(2));  // -1
+        Check.eq("-1", () -> c.get(2));
         c.put(4, 4);                    // evicts key 1
-        System.out.println(c.get(1));  // -1
-        System.out.println(c.get(3));  // 3
-        System.out.println(c.get(4));  // 4
+        Check.eq("-1", () -> c.get(1));
+        Check.eq("3", () -> c.get(3));
+        Check.eq("4", () -> c.get(4));
+        Check.summary();
     }
 }

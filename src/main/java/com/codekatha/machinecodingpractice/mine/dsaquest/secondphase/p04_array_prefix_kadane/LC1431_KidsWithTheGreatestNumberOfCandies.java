@@ -50,8 +50,10 @@ public class LC1431_KidsWithTheGreatestNumberOfCandies {
 
     public static void main(String[] args) {
         LC1431_KidsWithTheGreatestNumberOfCandies sol = new LC1431_KidsWithTheGreatestNumberOfCandies();
-        System.out.println(sol.kidsWithCandies(new int[]{2,3,5,1,3}, 3)); // [true, true, true, false, true]
-        System.out.println(sol.kidsWithCandies(new int[]{4,2,1,1,2}, 1)); // [true, false, false, false, false]
-        System.out.println(sol.kidsWithCandies(new int[]{12,1,12}, 10));  // [true, false, true]
+        Check.start("LC1431_KidsWithTheGreatestNumberOfCandies");
+        Check.eq("[true, true, true, false, true]", () -> sol.kidsWithCandies(new int[]{2,3,5,1,3}, 3));
+        Check.eq("[true, false, false, false, false]", () -> sol.kidsWithCandies(new int[]{4,2,1,1,2}, 1));
+        Check.eq("[true, false, true]", () -> sol.kidsWithCandies(new int[]{12,1,12}, 10));
+        Check.summary();
     }
 }

@@ -41,7 +41,9 @@ public class LC0347_TopKFrequentElements {
 
     public static void main(String[] args) {
         LC0347_TopKFrequentElements sol = new LC0347_TopKFrequentElements();
-        System.out.println(Arrays.toString(sol.topKFrequent(new int[]{1,1,1,2,2,3}, 2))); // [1, 2]
-        System.out.println(Arrays.toString(sol.topKFrequent(new int[]{1}, 1)));           // [1]
+        Check.start("LC0347_TopKFrequentElements");
+        Check.eq("[1, 2]", () -> Arrays.toString(sol.topKFrequent(new int[]{1,1,1,2,2,3}, 2)));
+        Check.eq("[1]", () -> Arrays.toString(sol.topKFrequent(new int[]{1}, 1)));
+        Check.summary();
     }
 }

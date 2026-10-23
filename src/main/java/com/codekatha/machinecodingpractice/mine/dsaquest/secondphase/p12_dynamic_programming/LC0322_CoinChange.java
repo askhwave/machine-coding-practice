@@ -48,8 +48,10 @@ public class LC0322_CoinChange {
 
     public static void main(String[] args) {
         LC0322_CoinChange sol = new LC0322_CoinChange();
-        System.out.println(sol.coinChange(new int[]{1,2,5}, 11)); // 3
-        System.out.println(sol.coinChange(new int[]{2}, 3));       // -1
-        System.out.println(sol.coinChange(new int[]{1}, 0));       // 0
+        Check.start("LC0322_CoinChange");
+        Check.eq("3", () -> sol.coinChange(new int[]{1,2,5}, 11));
+        Check.eq("-1", () -> sol.coinChange(new int[]{2}, 3));
+        Check.eq("0", () -> sol.coinChange(new int[]{1}, 0));
+        Check.summary();
     }
 }

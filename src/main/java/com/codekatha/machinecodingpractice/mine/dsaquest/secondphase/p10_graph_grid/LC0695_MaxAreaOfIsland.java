@@ -41,8 +41,10 @@ public class LC0695_MaxAreaOfIsland {
 
     public static void main(String[] args) {
         LC0695_MaxAreaOfIsland sol = new LC0695_MaxAreaOfIsland();
+        Check.start("LC0695_MaxAreaOfIsland");
         int[][] g = {{0,0,1,0,0,0,0,1,0,0,0,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0},{0,1,1,0,1,0,0,0,0,0,0,0,0},{0,1,0,0,1,1,0,0,1,0,1,0,0},{0,1,0,0,1,1,0,0,1,1,1,0,0},{0,0,0,0,0,0,0,0,0,0,1,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0},{0,0,0,0,0,0,0,1,1,0,0,0,0}};
-        System.out.println(sol.maxAreaOfIsland(g)); // 6
-        System.out.println(sol.maxAreaOfIsland(new int[][]{{0,0,0,0,0,0,0,0}})); // 0
+        Check.eq("6", () -> sol.maxAreaOfIsland(g));
+        Check.eq("0", () -> sol.maxAreaOfIsland(new int[][]{{0,0,0,0,0,0,0,0}}));
+        Check.summary();
     }
 }

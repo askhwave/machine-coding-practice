@@ -52,9 +52,11 @@ public class LC0133_CloneGraph {
 
     public static void main(String[] args) {
         LC0133_CloneGraph sol = new LC0133_CloneGraph();
+        Check.start("LC0133_CloneGraph");
         GraphNode g = GraphNode.build(new int[][]{{2,4},{1,3},{2,4},{1,3}});
         GraphNode c = sol.cloneGraph(g);
-        System.out.println(GraphNode.dump(c));        // 1:[2, 4] 2:[1, 3] 3:[2, 4] 4:[1, 3]
-        System.out.println(c != g);                   // true (alag object hona chahiye)
+        Check.eq("1:[2, 4] 2:[1, 3] 3:[2, 4] 4:[1, 3]", () -> GraphNode.dump(c));
+        Check.eq(true, () -> c != g); // clone alag object hona chahiye
+        Check.summary();
     }
 }

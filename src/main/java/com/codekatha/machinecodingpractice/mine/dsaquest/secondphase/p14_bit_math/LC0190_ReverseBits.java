@@ -38,7 +38,9 @@ public class LC0190_ReverseBits {
 
     public static void main(String[] args) {
         LC0190_ReverseBits sol = new LC0190_ReverseBits();
-        System.out.println(sol.reverseBits(43261596));   // 964176192
-        System.out.println(sol.reverseBits(2147483644));  // 1073741822
+        Check.start("LC0190_ReverseBits");
+        Check.eq("964176192", () -> sol.reverseBits(43261596));
+        Check.eq("1073741822", () -> sol.reverseBits(2147483644));
+        Check.summary();
     }
 }

@@ -40,7 +40,9 @@ public class LC0169_MajorityElement {
 
     public static void main(String[] args) {
         LC0169_MajorityElement sol = new LC0169_MajorityElement();
-        System.out.println(sol.majorityElement(new int[]{3,2,3}));       // 3
-        System.out.println(sol.majorityElement(new int[]{2,2,1,1,1,2,2})); // 2
+        Check.start("LC0169_MajorityElement");
+        Check.eq("3", () -> sol.majorityElement(new int[]{3,2,3}));
+        Check.eq("2", () -> sol.majorityElement(new int[]{2,2,1,1,1,2,2}));
+        Check.summary();
     }
 }

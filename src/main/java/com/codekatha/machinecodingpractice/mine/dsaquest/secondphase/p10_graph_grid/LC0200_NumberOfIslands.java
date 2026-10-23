@@ -41,9 +41,11 @@ public class LC0200_NumberOfIslands {
 
     public static void main(String[] args) {
         LC0200_NumberOfIslands sol = new LC0200_NumberOfIslands();
+        Check.start("LC0200_NumberOfIslands");
         char[][] g1 = {{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}};
-        System.out.println(sol.numIslands(g1)); // 1
+        Check.eq("1", () -> sol.numIslands(g1));
         char[][] g2 = {{'1','1','0','0','0'},{'1','1','0','0','0'},{'0','0','1','0','0'},{'0','0','0','1','1'}};
-        System.out.println(sol.numIslands(g2)); // 3
+        Check.eq("3", () -> sol.numIslands(g2));
+        Check.summary();
     }
 }

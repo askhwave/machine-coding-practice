@@ -37,7 +37,9 @@ public class LC1295_FindNumbersWithEvenNumberOfDigits {
 
     public static void main(String[] args) {
         LC1295_FindNumbersWithEvenNumberOfDigits sol = new LC1295_FindNumbersWithEvenNumberOfDigits();
-        System.out.println(sol.findNumbers(new int[]{12,345,2,6,7896})); // 2
-        System.out.println(sol.findNumbers(new int[]{555,901,482,1771})); // 1
+        Check.start("LC1295_FindNumbersWithEvenNumberOfDigits");
+        Check.eq("2", () -> sol.findNumbers(new int[]{12,345,2,6,7896}));
+        Check.eq("1", () -> sol.findNumbers(new int[]{555,901,482,1771}));
+        Check.summary();
     }
 }

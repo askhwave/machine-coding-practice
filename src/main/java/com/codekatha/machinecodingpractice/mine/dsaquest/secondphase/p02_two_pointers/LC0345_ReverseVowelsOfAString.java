@@ -38,7 +38,9 @@ public class LC0345_ReverseVowelsOfAString {
 
     public static void main(String[] args) {
         LC0345_ReverseVowelsOfAString sol = new LC0345_ReverseVowelsOfAString();
-        System.out.println(sol.reverseVowels("IceCreAm"));  // AceCreIm
-        System.out.println(sol.reverseVowels("leetcode"));  // leotcede
+        Check.start("LC0345_ReverseVowelsOfAString");
+        Check.eq("AceCreIm", () -> sol.reverseVowels("IceCreAm"));
+        Check.eq("leotcede", () -> sol.reverseVowels("leetcode"));
+        Check.summary();
     }
 }

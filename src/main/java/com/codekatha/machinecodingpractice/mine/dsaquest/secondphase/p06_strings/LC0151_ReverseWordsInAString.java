@@ -48,8 +48,10 @@ public class LC0151_ReverseWordsInAString {
 
     public static void main(String[] args) {
         LC0151_ReverseWordsInAString sol = new LC0151_ReverseWordsInAString();
-        System.out.println("[" + sol.reverseWords("the sky is blue") + "]");   // [blue is sky the]
-        System.out.println("[" + sol.reverseWords("  hello world  ") + "]");  // [world hello]
-        System.out.println("[" + sol.reverseWords("a good   example") + "]");  // [example good a]
+        Check.start("LC0151_ReverseWordsInAString");
+        Check.eq("[blue is sky the]", () -> "[" + sol.reverseWords("the sky is blue") + "]");
+        Check.eq("[world hello]", () -> "[" + sol.reverseWords("  hello world  ") + "]");
+        Check.eq("[example good a]", () -> "[" + sol.reverseWords("a good   example") + "]");
+        Check.summary();
     }
 }

@@ -38,8 +38,10 @@ public class LC0069_SqrtX {
 
     public static void main(String[] args) {
         LC0069_SqrtX sol = new LC0069_SqrtX();
-        System.out.println(sol.mySqrt(4));          // 2
-        System.out.println(sol.mySqrt(8));          // 2
-        System.out.println(sol.mySqrt(2147395599));  // 46339
+        Check.start("LC0069_SqrtX");
+        Check.eq("2", () -> sol.mySqrt(4));
+        Check.eq("2", () -> sol.mySqrt(8));
+        Check.eq("46339", () -> sol.mySqrt(2147395599));
+        Check.summary();
     }
 }

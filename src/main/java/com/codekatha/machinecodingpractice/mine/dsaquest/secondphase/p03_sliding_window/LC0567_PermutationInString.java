@@ -37,7 +37,9 @@ public class LC0567_PermutationInString {
 
     public static void main(String[] args) {
         LC0567_PermutationInString sol = new LC0567_PermutationInString();
-        System.out.println(sol.checkInclusion("ab", "eidbaooo")); // true
-        System.out.println(sol.checkInclusion("ab", "eidboaoo")); // false
+        Check.start("LC0567_PermutationInString");
+        Check.eq("true", () -> sol.checkInclusion("ab", "eidbaooo"));
+        Check.eq("false", () -> sol.checkInclusion("ab", "eidboaoo"));
+        Check.summary();
     }
 }

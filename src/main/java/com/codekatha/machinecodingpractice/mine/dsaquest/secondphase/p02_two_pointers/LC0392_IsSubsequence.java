@@ -41,7 +41,9 @@ public class LC0392_IsSubsequence {
 
     public static void main(String[] args) {
         LC0392_IsSubsequence sol = new LC0392_IsSubsequence();
-        System.out.println(sol.isSubsequence("abc", "ahbgdc")); // true
-        System.out.println(sol.isSubsequence("axc", "ahbgdc")); // false
+        Check.start("LC0392_IsSubsequence");
+        Check.eq("true", () -> sol.isSubsequence("abc", "ahbgdc"));
+        Check.eq("false", () -> sol.isSubsequence("axc", "ahbgdc"));
+        Check.summary();
     }
 }

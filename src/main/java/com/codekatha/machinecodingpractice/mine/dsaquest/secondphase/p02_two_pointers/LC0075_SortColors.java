@@ -41,8 +41,10 @@ public class LC0075_SortColors {
 
     public static void main(String[] args) {
         LC0075_SortColors sol = new LC0075_SortColors();
+        Check.start("LC0075_SortColors");
         int[] a = {2,0,2,1,1,0};
         sol.sortColors(a);
-        System.out.println(Arrays.toString(a)); // [0, 0, 1, 1, 2, 2]
+        Check.eq("[0, 0, 1, 1, 2, 2]", () -> Arrays.toString(a));
+        Check.summary();
     }
 }

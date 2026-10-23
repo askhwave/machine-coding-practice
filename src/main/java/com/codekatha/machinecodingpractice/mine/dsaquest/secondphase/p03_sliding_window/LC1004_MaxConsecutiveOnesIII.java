@@ -38,7 +38,9 @@ public class LC1004_MaxConsecutiveOnesIII {
 
     public static void main(String[] args) {
         LC1004_MaxConsecutiveOnesIII sol = new LC1004_MaxConsecutiveOnesIII();
-        System.out.println(sol.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2)); // 6
-        System.out.println(sol.longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3)); // 10
+        Check.start("LC1004_MaxConsecutiveOnesIII");
+        Check.eq("6", () -> sol.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2));
+        Check.eq("10", () -> sol.longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3));
+        Check.summary();
     }
 }

@@ -46,8 +46,10 @@ public class LC0122_BestTimeToBuyAndSellStockII {
 
     public static void main(String[] args) {
         LC0122_BestTimeToBuyAndSellStockII sol = new LC0122_BestTimeToBuyAndSellStockII();
-        System.out.println(sol.maxProfit(new int[]{7,1,5,3,6,4})); // 7
-        System.out.println(sol.maxProfit(new int[]{1,2,3,4,5}));   // 4
-        System.out.println(sol.maxProfit(new int[]{7,6,4,3,1}));   // 0
+        Check.start("LC0122_BestTimeToBuyAndSellStockII");
+        Check.eq("7", () -> sol.maxProfit(new int[]{7,1,5,3,6,4}));
+        Check.eq("4", () -> sol.maxProfit(new int[]{1,2,3,4,5}));
+        Check.eq("0", () -> sol.maxProfit(new int[]{7,6,4,3,1}));
+        Check.summary();
     }
 }

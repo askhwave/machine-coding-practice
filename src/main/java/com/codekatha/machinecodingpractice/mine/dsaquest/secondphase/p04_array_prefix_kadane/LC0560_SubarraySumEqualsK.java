@@ -38,8 +38,10 @@ public class LC0560_SubarraySumEqualsK {
 
     public static void main(String[] args) {
         LC0560_SubarraySumEqualsK sol = new LC0560_SubarraySumEqualsK();
-        System.out.println(sol.subarraySum(new int[]{1,1,1}, 2));   // 2
-        System.out.println(sol.subarraySum(new int[]{1,2,3}, 3));   // 2
-        System.out.println(sol.subarraySum(new int[]{1,-1,0}, 0));  // 3
+        Check.start("LC0560_SubarraySumEqualsK");
+        Check.eq("2", () -> sol.subarraySum(new int[]{1,1,1}, 2));
+        Check.eq("2", () -> sol.subarraySum(new int[]{1,2,3}, 3));
+        Check.eq("3", () -> sol.subarraySum(new int[]{1,-1,0}, 0));
+        Check.summary();
     }
 }

@@ -43,8 +43,10 @@ public class LC0135_Candy {
 
     public static void main(String[] args) {
         LC0135_Candy sol = new LC0135_Candy();
-        System.out.println(sol.candy(new int[]{1,0,2})); // 5
-        System.out.println(sol.candy(new int[]{1,2,2})); // 4
-        System.out.println(sol.candy(new int[]{1,3,2,2,1})); // 7
+        Check.start("LC0135_Candy");
+        Check.eq("5", () -> sol.candy(new int[]{1,0,2}));
+        Check.eq("4", () -> sol.candy(new int[]{1,2,2}));
+        Check.eq("7", () -> sol.candy(new int[]{1,3,2,2,1}));
+        Check.summary();
     }
 }

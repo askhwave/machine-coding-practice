@@ -46,7 +46,9 @@ public class LC0021_MergeTwoSortedLists {
 
     public static void main(String[] args) {
         LC0021_MergeTwoSortedLists sol = new LC0021_MergeTwoSortedLists();
-        System.out.println(sol.mergeTwoLists(ListNode.of(1,2,4), ListNode.of(1,3,4))); // 1->1->2->3->4->4
-        System.out.println(sol.mergeTwoLists(null, ListNode.of(0)));                  // 0
+        Check.start("LC0021_MergeTwoSortedLists");
+        Check.eq("1->1->2->3->4->4", () -> sol.mergeTwoLists(ListNode.of(1,2,4), ListNode.of(1,3,4)));
+        Check.eq("0", () -> sol.mergeTwoLists(null, ListNode.of(0)));
+        Check.summary();
     }
 }

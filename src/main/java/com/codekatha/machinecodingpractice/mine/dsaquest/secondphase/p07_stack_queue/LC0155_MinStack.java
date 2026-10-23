@@ -53,11 +53,13 @@ public class LC0155_MinStack {
 
     public static void main(String[] args) {
         LC0155_MinStack sol = new LC0155_MinStack();
+        Check.start("LC0155_MinStack");
         MinStack s = new MinStack();
         s.push(-2); s.push(0); s.push(-3);
-        System.out.println(s.getMin()); // -3
+        Check.eq("-3", () -> s.getMin());
         s.pop();
-        System.out.println(s.top());    // 0
-        System.out.println(s.getMin()); // -2
+        Check.eq("0", () -> s.top());
+        Check.eq("-2", () -> s.getMin());
+        Check.summary();
     }
 }

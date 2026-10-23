@@ -46,8 +46,10 @@ public class LC0209_MinimumSizeSubarraySum {
 
     public static void main(String[] args) {
         LC0209_MinimumSizeSubarraySum sol = new LC0209_MinimumSizeSubarraySum();
-        System.out.println(sol.minSubArrayLen(7, new int[]{2,3,1,2,4,3}));          // 2
-        System.out.println(sol.minSubArrayLen(4, new int[]{1,4,4}));                // 1
-        System.out.println(sol.minSubArrayLen(11, new int[]{1,1,1,1,1,1,1,1}));      // 0
+        Check.start("LC0209_MinimumSizeSubarraySum");
+        Check.eq("2", () -> sol.minSubArrayLen(7, new int[]{2,3,1,2,4,3}));
+        Check.eq("1", () -> sol.minSubArrayLen(4, new int[]{1,4,4}));
+        Check.eq("0", () -> sol.minSubArrayLen(11, new int[]{1,1,1,1,1,1,1,1}));
+        Check.summary();
     }
 }

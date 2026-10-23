@@ -46,9 +46,11 @@ public class LC0205_IsomorphicStrings {
 
     public static void main(String[] args) {
         LC0205_IsomorphicStrings sol = new LC0205_IsomorphicStrings();
-        System.out.println(sol.isIsomorphic("egg", "add"));     // true
-        System.out.println(sol.isIsomorphic("foo", "bar"));     // false
-        System.out.println(sol.isIsomorphic("paper", "title")); // true
-        System.out.println(sol.isIsomorphic("badc", "baba"));   // false
+        Check.start("LC0205_IsomorphicStrings");
+        Check.eq("true", () -> sol.isIsomorphic("egg", "add"));
+        Check.eq("false", () -> sol.isIsomorphic("foo", "bar"));
+        Check.eq("true", () -> sol.isIsomorphic("paper", "title"));
+        Check.eq("false", () -> sol.isIsomorphic("badc", "baba"));
+        Check.summary();
     }
 }

@@ -45,7 +45,9 @@ public class LC0496_NextGreaterElementI {
 
     public static void main(String[] args) {
         LC0496_NextGreaterElementI sol = new LC0496_NextGreaterElementI();
-        System.out.println(Arrays.toString(sol.nextGreaterElement(new int[]{4,1,2}, new int[]{1,3,4,2}))); // [-1, 3, -1]
-        System.out.println(Arrays.toString(sol.nextGreaterElement(new int[]{2,4}, new int[]{1,2,3,4})));     // [3, -1]
+        Check.start("LC0496_NextGreaterElementI");
+        Check.eq("[-1, 3, -1]", () -> Arrays.toString(sol.nextGreaterElement(new int[]{4,1,2}, new int[]{1,3,4,2})));
+        Check.eq("[3, -1]", () -> Arrays.toString(sol.nextGreaterElement(new int[]{2,4}, new int[]{1,2,3,4})));
+        Check.summary();
     }
 }

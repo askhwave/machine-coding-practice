@@ -46,8 +46,10 @@ public class LC0035_SearchInsertPosition {
 
     public static void main(String[] args) {
         LC0035_SearchInsertPosition sol = new LC0035_SearchInsertPosition();
-        System.out.println(sol.searchInsert(new int[]{1,3,5,6}, 5)); // 2
-        System.out.println(sol.searchInsert(new int[]{1,3,5,6}, 2)); // 1
-        System.out.println(sol.searchInsert(new int[]{1,3,5,6}, 7)); // 4
+        Check.start("LC0035_SearchInsertPosition");
+        Check.eq("2", () -> sol.searchInsert(new int[]{1,3,5,6}, 5));
+        Check.eq("1", () -> sol.searchInsert(new int[]{1,3,5,6}, 2));
+        Check.eq("4", () -> sol.searchInsert(new int[]{1,3,5,6}, 7));
+        Check.summary();
     }
 }

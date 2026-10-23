@@ -47,8 +47,10 @@ public class LC1672_RichestCustomerWealth {
 
     public static void main(String[] args) {
         LC1672_RichestCustomerWealth sol = new LC1672_RichestCustomerWealth();
-        System.out.println(sol.maximumWealth(new int[][]{{1,2,3},{3,2,1}}));       // 6
-        System.out.println(sol.maximumWealth(new int[][]{{1,5},{7,3},{3,5}}));     // 10
-        System.out.println(sol.maximumWealth(new int[][]{{2,8,7},{7,1,3},{1,9,5}})); // 17
+        Check.start("LC1672_RichestCustomerWealth");
+        Check.eq("6", () -> sol.maximumWealth(new int[][]{{1,2,3},{3,2,1}}));
+        Check.eq("10", () -> sol.maximumWealth(new int[][]{{1,5},{7,3},{3,5}}));
+        Check.eq("17", () -> sol.maximumWealth(new int[][]{{2,8,7},{7,1,3},{1,9,5}}));
+        Check.summary();
     }
 }

@@ -44,8 +44,10 @@ public class LC0334_IncreasingTripletSubsequence {
 
     public static void main(String[] args) {
         LC0334_IncreasingTripletSubsequence sol = new LC0334_IncreasingTripletSubsequence();
-        System.out.println(sol.increasingTriplet(new int[]{1,2,3,4,5}));   // true
-        System.out.println(sol.increasingTriplet(new int[]{5,4,3,2,1}));   // false
-        System.out.println(sol.increasingTriplet(new int[]{2,1,5,0,4,6})); // true
+        Check.start("LC0334_IncreasingTripletSubsequence");
+        Check.eq("true", () -> sol.increasingTriplet(new int[]{1,2,3,4,5}));
+        Check.eq("false", () -> sol.increasingTriplet(new int[]{5,4,3,2,1}));
+        Check.eq("true", () -> sol.increasingTriplet(new int[]{2,1,5,0,4,6}));
+        Check.summary();
     }
 }

@@ -42,7 +42,9 @@ public class LC0274_HIndex {
 
     public static void main(String[] args) {
         LC0274_HIndex sol = new LC0274_HIndex();
-        System.out.println(sol.hIndex(new int[]{3,0,6,1,5})); // 3
-        System.out.println(sol.hIndex(new int[]{1,3,1}));     // 1
+        Check.start("LC0274_HIndex");
+        Check.eq("3", () -> sol.hIndex(new int[]{3,0,6,1,5}));
+        Check.eq("1", () -> sol.hIndex(new int[]{1,3,1}));
+        Check.summary();
     }
 }

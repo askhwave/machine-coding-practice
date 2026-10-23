@@ -45,8 +45,10 @@ public class LC0136_SingleNumber {
 
     public static void main(String[] args) {
         LC0136_SingleNumber sol = new LC0136_SingleNumber();
-        System.out.println(sol.singleNumber(new int[]{2,2,1}));       // 1
-        System.out.println(sol.singleNumber(new int[]{4,1,2,1,2}));   // 4
-        System.out.println(sol.singleNumber(new int[]{1}));           // 1
+        Check.start("LC0136_SingleNumber");
+        Check.eq("1", () -> sol.singleNumber(new int[]{2,2,1}));
+        Check.eq("4", () -> sol.singleNumber(new int[]{4,1,2,1,2}));
+        Check.eq("1", () -> sol.singleNumber(new int[]{1}));
+        Check.summary();
     }
 }

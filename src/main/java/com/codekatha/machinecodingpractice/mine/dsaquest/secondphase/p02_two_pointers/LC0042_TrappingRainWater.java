@@ -38,7 +38,9 @@ public class LC0042_TrappingRainWater {
 
     public static void main(String[] args) {
         LC0042_TrappingRainWater sol = new LC0042_TrappingRainWater();
-        System.out.println(sol.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1})); // 6
-        System.out.println(sol.trap(new int[]{4,2,0,3,2,5}));             // 9
+        Check.start("LC0042_TrappingRainWater");
+        Check.eq("6", () -> sol.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}));
+        Check.eq("9", () -> sol.trap(new int[]{4,2,0,3,2,5}));
+        Check.summary();
     }
 }

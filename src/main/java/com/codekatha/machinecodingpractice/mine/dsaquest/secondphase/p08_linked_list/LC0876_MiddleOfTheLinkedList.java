@@ -38,7 +38,9 @@ public class LC0876_MiddleOfTheLinkedList {
 
     public static void main(String[] args) {
         LC0876_MiddleOfTheLinkedList sol = new LC0876_MiddleOfTheLinkedList();
-        System.out.println(sol.middleNode(ListNode.of(1,2,3,4,5)));     // 3->4->5
-        System.out.println(sol.middleNode(ListNode.of(1,2,3,4,5,6)));   // 4->5->6
+        Check.start("LC0876_MiddleOfTheLinkedList");
+        Check.eq("3->4->5", () -> sol.middleNode(ListNode.of(1,2,3,4,5)));
+        Check.eq("4->5->6", () -> sol.middleNode(ListNode.of(1,2,3,4,5,6)));
+        Check.summary();
     }
 }

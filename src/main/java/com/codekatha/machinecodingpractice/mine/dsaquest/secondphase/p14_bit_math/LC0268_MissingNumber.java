@@ -46,8 +46,10 @@ public class LC0268_MissingNumber {
 
     public static void main(String[] args) {
         LC0268_MissingNumber sol = new LC0268_MissingNumber();
-        System.out.println(sol.missingNumber(new int[]{3,0,1}));              // 2
-        System.out.println(sol.missingNumber(new int[]{0,1}));                // 2
-        System.out.println(sol.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));   // 8
+        Check.start("LC0268_MissingNumber");
+        Check.eq("2", () -> sol.missingNumber(new int[]{3,0,1}));
+        Check.eq("2", () -> sol.missingNumber(new int[]{0,1}));
+        Check.eq("8", () -> sol.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
+        Check.summary();
     }
 }
