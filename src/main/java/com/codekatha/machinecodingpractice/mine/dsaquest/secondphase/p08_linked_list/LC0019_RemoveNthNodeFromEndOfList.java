@@ -1,0 +1,55 @@
+package com.codekatha.machinecodingpractice.mine.dsaquest.secondphase.p08_linked_list;
+
+import com.codekatha.machinecodingpractice.mine.dsaquest.common.*;
+import com.codekatha.machinecodingpractice.mine.dsaquest.common.ListNode;
+
+/**
+ * LeetCode #19 - Remove Nth Node From End of List  [Medium]
+ * Link   : https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ * Pattern: Linked List
+ *
+ * Given the head of a linked list, remove the nth node from the end of the list and return its
+ * head.
+ *
+ * Example 1:
+ * <pre>
+ * Input: head = [1,2,3,4,5], n = 2
+ * Output: [1,2,3,5]
+ * </pre>
+ *
+ * Example 2:
+ * <pre>
+ * Input: head = [1], n = 1
+ * Output: []
+ * </pre>
+ *
+ * Example 3:
+ * <pre>
+ * Input: head = [1,2], n = 1
+ * Output: [1]
+ * </pre>
+ *
+ * Constraints:
+ *  - The number of nodes in the list is sz.
+ *  - 1 <= sz <= 30
+ *  - 0 <= Node.val <= 100
+ *  - 1 <= n <= sz
+ *  - Follow-up: Could you do this in one pass?
+ *
+ * Hint (spoiler - pehle khud try karo): Dummy node + fast ko n+1 step aage, phir dono saath chalao. Head hi delete ho to dummy bachata hai.
+ */
+public class LC0019_RemoveNthNodeFromEndOfList {
+
+    // TODO: apna solution yahan likho
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        return head;
+    }
+
+    public static void main(String[] args) {
+        LC0019_RemoveNthNodeFromEndOfList sol = new LC0019_RemoveNthNodeFromEndOfList();
+        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2,3,4,5), 2)); // 1->2->3->5
+        System.out.println(sol.removeNthFromEnd(ListNode.of(1), 1));         // null
+        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2), 1));       // 1
+        System.out.println(sol.removeNthFromEnd(ListNode.of(1,2), 2));       // 2
+    }
+}

@@ -1,0 +1,54 @@
+package com.codekatha.machinecodingpractice.mine.dsaquest.secondphase.p01_hashing_counting;
+
+import com.codekatha.machinecodingpractice.mine.dsaquest.common.*;
+
+/**
+ * LeetCode #205 - Isomorphic Strings  [Easy]
+ * Link   : https://leetcode.com/problems/isomorphic-strings/
+ * Pattern: Hash Map / Set / Counting
+ *
+ * Given two strings s and t, determine if they are isomorphic. Two strings s and t are
+ * isomorphic if the characters in s can be replaced to get t. All occurrences of a character
+ * must be replaced with another character while preserving the order of characters. No two
+ * characters may map to the same character, but a character may map to itself.
+ *
+ * Example 1:
+ * <pre>
+ * Input: s = "egg", t = "add"
+ * Output: true
+ * </pre>
+ *
+ * Example 2:
+ * <pre>
+ * Input: s = "foo", t = "bar"
+ * Output: false
+ * </pre>
+ *
+ * Example 3:
+ * <pre>
+ * Input: s = "paper", t = "title"
+ * Output: true
+ * </pre>
+ *
+ * Constraints:
+ *  - 1 <= s.length <= 5 * 10^4
+ *  - t.length == s.length
+ *  - s and t consist of any valid ascii character.
+ *
+ * Hint (spoiler - pehle khud try karo): Mapping dono direction me one-to-one honi chahiye: s->t aur t->s.
+ */
+public class LC0205_IsomorphicStrings {
+
+    // TODO: apna solution yahan likho
+    public boolean isIsomorphic(String s, String t) {
+        return false;
+    }
+
+    public static void main(String[] args) {
+        LC0205_IsomorphicStrings sol = new LC0205_IsomorphicStrings();
+        System.out.println(sol.isIsomorphic("egg", "add"));     // true
+        System.out.println(sol.isIsomorphic("foo", "bar"));     // false
+        System.out.println(sol.isIsomorphic("paper", "title")); // true
+        System.out.println(sol.isIsomorphic("badc", "baba"));   // false
+    }
+}
