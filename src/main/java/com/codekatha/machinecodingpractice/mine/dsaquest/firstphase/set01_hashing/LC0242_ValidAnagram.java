@@ -1,38 +1,58 @@
 package com.codekatha.machinecodingpractice.mine.dsaquest.firstphase.set01_hashing;
 
 import com.codekatha.machinecodingpractice.mine.dsaquest.common.*;
+
 import java.util.*;
 
 /**
  * LeetCode #242 - Valid Anagram  [Easy]
  * Link   : https://leetcode.com/problems/valid-anagram/
  * Pattern: Hash Map / Set / Counting
- *
+ * <p>
  * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
- *
+ * <p>
  * Example 1:
  * <pre>
  * Input: s = "anagram", t = "nagaram"
  * Output: true
  * </pre>
- *
+ * <p>
  * Example 2:
  * <pre>
  * Input: s = "rat", t = "car"
  * Output: false
  * </pre>
- *
+ * <p>
  * Constraints:
- *  - 1 <= s.length, t.length <= 5 * 10^4
- *  - s and t consist of lowercase English letters.
- *
+ * - 1 <= s.length, t.length <= 5 * 10^4
+ * - s and t consist of lowercase English letters.
+ * <p>
  * Hint (spoiler - pehle khud try karo): int[26] count: s se +1, t se -1, end me sab zero?
  */
 public class LC0242_ValidAnagram {
 
     // TODO: apna solution yahan likho
     public boolean isAnagram(String s, String t) {
-        return false;
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int len = s.length();
+        int[] sMap = new int[26];
+
+        for (int i = 0; i < len; i++) {
+            int idx = s.charAt(i) - 'a';
+            sMap[idx]++;
+        }
+
+        for (int i = 0; i < len; i++) {
+            int idx = t.charAt(i) - 'a';
+            if (sMap[idx] <= 0) {
+                return false;
+            }
+            sMap[idx]--;
+        }
+
+        return true;
     }
 
     public static void main(String[] args) {

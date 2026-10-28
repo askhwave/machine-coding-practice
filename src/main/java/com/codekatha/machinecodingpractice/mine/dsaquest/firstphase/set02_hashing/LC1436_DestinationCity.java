@@ -43,7 +43,18 @@ public class LC1436_DestinationCity {
 
     // TODO: apna solution yahan likho
     public String destCity(List<List<String>> paths) {
-        return "";
+        Map<String, String> cityMap = new HashMap<>();
+
+        for(List<String> path : paths){
+            cityMap.put(path.getFirst(), path.getLast());
+        }
+
+        String key = paths.getFirst().getFirst();
+        while(cityMap.containsKey(key)){
+            key = cityMap.get(key);
+        }
+
+        return key;
     }
 
     public static void main(String[] args) {
