@@ -1,0 +1,54 @@
+package com.codekatha.machinecodingpractice.mine.dsaquest.thirdphase.g04_linked_list.s01_reverse_merge_add;
+
+import com.codekatha.machinecodingpractice.mine.dsaquest.common.*;
+import java.util.*;
+
+/**
+ * LeetCode #206 - Reverse Linked List  [LeetCode: Easy | Cheatsheet: Round 2 F2F | Easy]
+ * Link   : https://leetcode.com/problems/reverse-linked-list/
+ * Group  : Linked List  >  Reverse / Merge / Add
+ * Revision: pehle bhi aa chuka hai (firstphase/set35_linked_list, secondphase/p08_linked_list). Bina dekhe dobara solve karo - Atlassian me yehi repeat hota hai.
+ *
+ * Given the head of a singly linked list, reverse the list, and return the reversed list.
+ *
+ * Example 1:
+ * <pre>
+ * Input: head = [1,2,3,4,5]
+ * Output: [5,4,3,2,1]
+ * </pre>
+ *
+ * Example 2:
+ * <pre>
+ * Input: head = [1,2]
+ * Output: [2,1]
+ * </pre>
+ *
+ * Example 3:
+ * <pre>
+ * Input: head = []
+ * Output: []
+ * </pre>
+ *
+ * Constraints:
+ *  - The number of nodes in the list is the range [0, 5000].
+ *  - -5000 <= Node.val <= 5000
+ *  - Follow-up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+ *
+ * Hint (spoiler - pehle khud try karo): prev, cur, next teen pointer. Pehle next save karo, phir link ulto. Dono iterative aur recursive likho.
+ */
+public class LC0206_ReverseLinkedList {
+
+    // TODO: apna solution yahan likho
+    public ListNode reverseList(ListNode head) {
+        return head;
+    }
+
+    public static void main(String[] args) {
+        LC0206_ReverseLinkedList sol = new LC0206_ReverseLinkedList();
+        Check.start("LC0206_ReverseLinkedList");
+        Check.eq("5->4->3->2->1", () -> sol.reverseList(ListNode.of(1,2,3,4,5)));
+        Check.eq("2->1", () -> sol.reverseList(ListNode.of(1,2)));
+        Check.eq("null", () -> sol.reverseList(null));
+        Check.summary();
+    }
+}

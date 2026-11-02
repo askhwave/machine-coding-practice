@@ -1,0 +1,55 @@
+package com.codekatha.machinecodingpractice.mine.dsaquest.thirdphase.g01_arrays_hashing.s01_hash_map_counting;
+
+import com.codekatha.machinecodingpractice.mine.dsaquest.common.*;
+import java.util.*;
+
+/**
+ * LeetCode #49 - Group Anagrams  [LeetCode: Medium | Cheatsheet: Round 1 OA | Medium]
+ * Link   : https://leetcode.com/problems/group-anagrams/
+ * Group  : Arrays & Hashing  >  Hash Map & Counting
+ * Revision: pehle bhi aa chuka hai (firstphase/set05_hashing, secondphase/p01_hashing_counting). Bina dekhe dobara solve karo - Atlassian me yehi repeat hota hai.
+ *
+ * Given an array of strings strs, group the anagrams together. You can return the answer in
+ * any order.
+ *
+ * Example 1:
+ * <pre>
+ * Input: strs = ["eat","tea","tan","ate","nat","bat"]
+ * Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+ * </pre>
+ *
+ * Example 2:
+ * <pre>
+ * Input: strs = [""]
+ * Output: [[""]]
+ * </pre>
+ *
+ * Example 3:
+ * <pre>
+ * Input: strs = ["a"]
+ * Output: [["a"]]
+ * </pre>
+ *
+ * Constraints:
+ *  - 1 <= strs.length <= 10^4
+ *  - 0 <= strs[i].length <= 100
+ *  - strs[i] consists of lowercase English letters.
+ *
+ * Hint (spoiler - pehle khud try karo): Canonical key banao (sorted chars ya 26-count string) -> Map&lt;key, List>.
+ */
+public class LC0049_GroupAnagrams {
+
+    // TODO: apna solution yahan likho
+    public List<List<String>> groupAnagrams(String[] strs) {
+        return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        LC0049_GroupAnagrams sol = new LC0049_GroupAnagrams();
+        Check.start("LC0049_GroupAnagrams");
+        Check.sameElements("[[bat], [nat, tan], [ate, eat, tea]]", () -> sol.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        Check.sameElements("[[]]", () -> sol.groupAnagrams(new String[]{""}));
+        Check.sameElements("[[a]]", () -> sol.groupAnagrams(new String[]{"a"}));
+        Check.summary();
+    }
+}
