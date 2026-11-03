@@ -40,7 +40,24 @@ public class LC0003_LongestSubstringWithoutRepeatingCharacters {
 
     // TODO: apna solution yahan likho
     public int lengthOfLongestSubstring(String s) {
-        return 0;
+        int n = s.length();
+        if(n==0||n==1){
+            return n;
+        }
+        Set<Character> set = new HashSet<>();
+        int l=0;
+        set.add(s.charAt(l));
+        int ans = 1;
+        for(int r=1;r<n;r++){
+            while(set.contains(s.charAt(r))){
+                set.remove(s.charAt(l));
+                l++;
+            }
+            set.add(s.charAt(r));
+            ans = Math.max(ans,r-l+1);
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
