@@ -39,7 +39,12 @@ public class LC1480_RunningSumOf1dArray {
 
     // TODO: apna solution yahan likho
     public int[] runningSum(int[] nums) {
-        return new int[0];
+        int sum = 0;
+        int[] ans = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = sum+=nums[i];
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
